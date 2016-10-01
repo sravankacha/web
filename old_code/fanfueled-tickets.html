@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>FanFueled Tickets</title>
+		<meta charset="utf-8" />
+		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="KEYWORDS" content="UI Design, Code, UX solution, HTML, CSS, Media queries" />
+		<meta name="DESCRIPTION" content="A UI solution for simpler and user friendly event tickets" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />		
+		<link rel="stylesheet" href="css/nyroModal.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/nyro.js"></script>
+		<script type="text/javascript" src="js/slides.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="js/nyro-ie6.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+			function setgo(){
+				document.getElementById('swffile').style.display='block'; 
+				document.getElementById('message').style.display='none'; 	
+			};
+			$(function() {
+			  $('.nyroModal').nyroModal();
+			  $('#slides,#slides2').slides();
+				checkNav();			
+				$('#contact').click(function(){
+					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
+				 });
+				 function checkNav(){
+					var wide =  $(document).outerWidth();
+					if(wide < 790){
+						$(".nav").removeClass("desktop").addClass("mobile");
+					}else{
+						$(".nav").removeClass("mobile").addClass("desktop");
+					}
+				}
+				$(window).resize(function () {
+			        checkNav();
+			    });
+			});
+		</script>
+	</head>
+	<body>	
+	<div class="nav desktop">
+		<a href="/" class="logo" title="Sravan Kachavarapu">
+			<span>SK</span>
+			<h1>Sravan Kachavarapu</h1>
+		</a>
+		<a href="javascript:void(0)" class="nav-icon"></a>
+		<div class="nav-list">
+			<ul class="verMenu">
+				<li><a href="/" id="home" data-hover="Home">Home</a></li>
+				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
+				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
+				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<section class="project">
+		<div class="proj-banner">
+			<img src="" title="" alt=""/>
+		</div>
+		<div class="left">
+			<a href="/projects.html">&larr; Back to projects</a>
+			<div class="proj-features btcf">
+				<a href="#" class="code" data-title="Code snippets"></a>
+				<a href="#" class="screenshot" data-title="Project Screenshots"></a>
+			</div>
+			<div class="proj-tags btcf">
+				<span>HTML/CSS</span>
+				<span>JavaScript</span>
+				<span>jQuery</span>
+			</div>
+		</div>
+		<div class="right">
+			<h2>FanFueled Tickets</h2>
+			<p>
+				FanFueled is a DIY event hosting and ticket selling platform. Event host can create an event and sell multiple types of tickets. A user can purchase a ticket for an event. This ticket is sent to user email address as a PDF file. This method had the following drawbacks:
+				<ul>
+					<li>Information was not well organized</li>
+					<li>PDF creation was process intensive</li>
+					<li>PDF size is big for Mobiles</li>
+					<li>Access to tickets was not easy</li>
+					<li>Printing of tickets right after the purhcase was not possible.</li>
+				</ul>
+			</p>
+			<p>
+				To solve the above issues, Redesign was needed. The new solution is a html based ticket which solves the above issues. Information is well organized with redesign, HTML ticket creation is easy and faster. HTML solution is responsive and is mobile friendly. Access to tickets is easier and is available for print right away.
+			</p>
+<!-- 			<div class="code-snips">
+				<h4>Javascript Code Snippet</h4>
+				<pre>
+				</pre>
+			</div> -->
+			<div class="proj-img">
+				<img src="images/ff-tickets/ticket-reg.png"/>
+				<label>New Ticket Design</label>
+			</div>
+			<div class="proj-img">
+				<img src="images/ff-tickets/ticket-mob.png"/>
+				<label>Responsive Mobile Ticket</label>
+			</div>
+			<div class="proj-img">
+				<img src="images/ff-tickets/email-conf.png"/>
+				<label>Email Confirmation</label>
+			</div>
+		</div>
+	</section>
+	<div class="contact">
+		<div class="card">
+			<div class="name">
+				<p>Sravan Kachavarapu</p>
+				<span>sravankacha [at] gmail.com</span>
+			</div>
+			<div class="socialmedia">
+				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="images/FACEBOOK.png" height="30" width="30"/></a>
+				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="images/TWITTER.png" height="30" width="30"></a>
+				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="images/GOOGLE+.png" height="30" width="30"/></a>
+				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="images/LINKEDIN.png" height="30" width="30"/></a>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

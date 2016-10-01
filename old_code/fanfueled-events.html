@@ -1,0 +1,195 @@
+<html>
+	<head>
+		<title>A Re-Design proposal for FanFueled Events</title>
+		<meta charset="utf-8" />
+		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="KEYWORDS" content="Redesign, proposal,UCD, Heuristic analysis, competetive analysis, user-testing, wireframes, proptotype, Hi-fidelity, mockups, UI, UX, CSS, Checkout, User Experience, Improvement, e-commerce" />
+		<meta name="DESCRIPTION" content="This is a redesign proposal for FanFueled Events as part of my capstone project. This is an overall UX and UI improvement based on complete UCD process. " />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />		
+		<link rel="stylesheet" href="css/nyroModal.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/nyro.js"></script>
+		<script type="text/javascript" src="js/slides.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="js/nyro-ie6.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+			function setgo(){
+				document.getElementById('swffile').style.display='block'; 
+				document.getElementById('message').style.display='none'; 	
+			};
+			$(function() {
+			  $('.nyroModal').nyroModal();
+			  $('#slides,#slides2').slides();
+				checkNav();			
+				$('#contact').click(function(){
+					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
+				 });
+				 function checkNav(){
+					var wide =  $(document).outerWidth();
+					if(wide < 790){
+						$(".nav").removeClass("desktop").addClass("mobile");
+					}else{
+						$(".nav").removeClass("mobile").addClass("desktop");
+					}
+				}
+				$(window).resize(function () {
+			        checkNav();
+			    });
+			});
+		</script>
+	</head>
+	<body>	
+	<div class="nav desktop">
+		<a href="#" class="logo" title="Sravan Kachavarapu">
+			<span>SK</span>
+			<h1>Sravan Kachavarapu</h1>
+		</a>
+		<a href="javascript:void(0)" class="nav-icon"></a>
+		<div class="nav-list">
+			<ul class="verMenu">
+				<li><a href="/" id="home" data-hover="Home">Home</a></li>
+				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
+				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
+				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<section class="project">
+		<div class="proj-banner">
+			<img src="" title="" alt=""/>
+		</div>
+		<div class="left">
+			<a href="/projects.html">&larr; Back to projects</a>
+			<div class="proj-features btcf">
+				<a href="#" class="wireframe" data-title="Wireframes"></a>
+				<a href="#" class="prototype" data-title="Prototype"></a>
+				<a href="#" class="screenshot" data-title="Project Screenshots"></a>
+			</div>
+			<div class="proj-tags btcf">
+				<span>UX</span>
+				<span>UI</span>
+				<span>Wireframes</span>
+				<span>Prototype</span>
+				<span>Design</span>
+			</div>
+		</div>
+		<div class="right">
+			<h2>FanFueled Events Redesign Proposal</h2>
+			<p>
+				FanFueled is a social ticketing platform that transforms fans into promoters. FanFueled gives fans easy ways to tell their friends on Facebook and Twitter about events they are attending. FanFueled rewards fans when friends purchase tickets through unique link.</p>
+			<p>
+				FanFueled sells tickets for local events and wants to expand the business. Current system was developed long ago and is not up to standards. FanFueled is losing business because customers are having problems using the system in turn losing clients. So FanFueled needs a redesign of site to improve the customer experience of purchasing tickets and also communicate the business idea to users to attract event organizers and Venues.</p>
+			<p>
+				I am a UI designer at FanFueled and worked on designing the new platform “FanFueled Engage”. So redesigning the new platform should reflect the consistent user experience and branding as the products are closely integrated. The main goals of this project are to improve user experience of ticket purchasing. The system should also have responsive design, consistent branding, and highly customizable user interface.</p>
+			<p>
+			<h3>Following work was done this project. </h3>
+			<ul class="proj-list">
+				<li>
+				<strong>1. Heuristic evaluation from Capstone classmates.</strong>
+				Since this is a redesign project, this exercise will give me inputs on various usability issues apart from ones that learnt from customer complaints. Also this exercise will give more detailed inspection of the ticket inspection process from classmates. This would guide me in addressing those usability issues and incorporating suggestions into the design.
+
+				Collected Heuristic analysis evaluations of current FanFueled website form capstone class members. Addition to that, I have also performed detailed heuristic evaluation of the same process. From all the evaluations, I found out ticket purchasing process has couple of major usability issues such as visibility of system status and many other minor usability issues such as marking required fields etc.
+				<a class="highlight" href="/ff/heuristic.pdf">Full Heuristic Evaluation &raquo;</a>
+				</li>
+
+				<li>
+				<strong>2. Competitive analysis.</strong>
+					This method will give me insights into different methods used by competitors to address the same issues FanFueled is facing, also gives a benchmark to improve the design and provide additional features. Also provides information on additional target audience for a ticketing platform.
+
+					I performed competitive analysis for the FanFueled ticketing service with some help from marketing and sales person at FanFueled. We found some good solutions and benchmarks for ticket purchase process and branding. We also explored some new features that would help FanFueled ticketing service gain market (Appendix B).
+					<a class="highlight" href="/ff/competitive.pdf">Competitive Analysis &raquo;</a>
+				</li>	
+				<li class="proj-wires">
+				<strong>3. Wireframes.</strong>
+					After collecting all the usability and design issues from above methods, Wireframes will be created addressing the usability issues and designing the process. Wireframes will be created in Axure and will be semi-interactive.
+
+					Based on the information gathered from above two methods, I created wireframes based on the current FanFueled website improving on the usability issues identified. The wireframes are created in Axure and added interactions to create a working prototype to use for usability testing
+
+					<h4>Lo Fi Wireframes</h4>					
+					<div style="display:block;clear:both;overflow:auto">
+
+					<div class="proj-img">
+						<img src="images/FFEvents/Lo-wire1.png"/>
+						<label>Basic Wireframe of Events list page</label>
+					</div>
+					<div class="proj-img">
+						<img src="images/FFEvents/Lo-wire2.png"/>
+						<label>Basic Wireframe of Event details page</label>
+					</div>
+					</div>
+					<h4>Mid Fi Wireframes</h4>
+					<div style="display:block;clear:both;overflow:auto">
+
+					<div class="proj-img">
+						<img src="images/FFEvents/Mid-wire1.png"/>
+						<label>Mid-Fi wireframe of Events List page</label>
+					</div>
+					<div class="proj-img">
+						<img src="images/FFEvents/Mid-wire2.png"/>
+						<label>Mid-Fi wireframe of Events Details page</label>
+					</div>
+					<div class="proj-img">
+						<img src="images/FFEvents/Mid-wire3.png"/>
+						<label>Mid-Fi wireframe of Checkout page</label>
+					</div>
+					<div class="proj-img">
+						<img src="images/FFEvents/Mid-wire4.png"/>
+						<label>Mid-Fi wireframe of Confirmation page</label>
+					</div>
+					</div>
+				</li>
+				<li>
+				<strong>4. Initial User Testing</strong>
+				First round of usability testing focused on identifying usability and design issues for the new task flows and designs. User testing will be conducted with 4-5 regular users of the site and additional 4-5 new users of the system.
+
+				Created a test plan for usability testing part of the project. Created all the materials required for the usability testing such as Test script, Consent, Task list, Pre and Post task questionnaire. Ovosolo software has been configured to record the test sessions. I performed a pilot test and made changes accordingly to the test material and Ovosolo software setup. I performed usability testing with 6 users (Appendix J) and the findings are discussed below.
+				<a class="highlight" href="/ff/user-testing.pdf">User Testing Report &raquo;</a>
+				</li>
+				<li>
+				<strong>5. Interactive prototype</strong>
+					A high fidelity interactive prototype will be created based on all the information collected from previous methods. This prototype will be built on initial wireframes, and will have branding and major functionality incorporated.
+
+					Hi-fidelity prototype and Re-Design: There were some major findings about the brand message and few usability issues. I created the re-designs based on the findings from the usability testing with users.
+				<a class="highlight prototype blue" href="http://share.axure.com/MA6SW9/" target="_blank">Interactive Prototype &raquo;</a>
+				</li>
+			</ul>
+			
+			<h4>Hi Fi Wireframes / Prototype</h4>
+			<div class="proj-img">
+				<img src="images/FFEvents/Hi-wire1.png"/>
+				<label>Events List page</label>
+			</div>
+			<div class="proj-img">
+				<img src="images/FFEvents/Hi-wire2.png"/>
+				<label>Event Detail page</label>
+			</div>
+			<div class="proj-img">
+				<img src="images/FFEvents/Hi-wire3.png"/>
+				<label>Checkout page</label>
+			</div>
+			<div class="proj-img">
+				<img src="images/FFEvents/Hi-wire4.png"/>
+				<label>Purchase Confirmation page</label>
+			</div>
+		</div>
+	</section>
+	<div class="contact">
+		<div class="card">
+			<div class="name">
+				<p>Sravan Kachavarapu</p>
+				<span>sravankacha [at] gmail.com</span>
+			</div>
+			<div class="socialmedia">
+				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="images/FACEBOOK.png" height="30" width="30"/></a>
+				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="images/TWITTER.png" height="30" width="30"></a>
+				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="images/GOOGLE+.png" height="30" width="30"/></a>
+				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="images/LINKEDIN.png" height="30" width="30"/></a>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

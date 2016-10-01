@@ -1,0 +1,199 @@
+
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
+	<title>LABS</title>
+	<meta name="KEYWORDS" content="Projects, UI Design, UX design,HTML5, CSS3, Javascript, jQuery, Animations, Experiments" />
+		<meta name="DESCRIPTION" content="These are my experimental projects in UI and Front-end Development using css3 animations, html5 and javascript." />
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	
+<style type="text/css">
+body{
+	font-weight:normal;
+	color:#000;
+	line-height:150%;
+	background-color: #F2F0F0;
+	font-family: Lato, 'Helvetica neue', Helvetica, Tahoma, Verdana, Arial, Sans-serif;
+	margin:0;
+	padding:0;
+}
+#circle{
+
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border:5px solid rgba(0,0,0,0.3);
+	
+	-webkit-box-shadow:0 0 5px #333;
+	-moz-box-shadow:0 0 5px #333;
+	background-color:#09c;
+	margin:0 auto;
+	position:relative;
+	top:100px;
+	-webkit-animation: slidein 1.5s ease-in-out;
+}
+ 
+@-webkit-keyframes slidein {
+  0% {
+    -webkit-transform: translateY(-100px);
+  }
+  20%{
+  	-webkit-transform: translateY(0px); 
+  }
+  35%{
+  	-webkit-transform: translateY(-40px);
+  }
+  60%{
+  	-webkit-transform: translateY(0px);
+  }
+  85%{
+  	-webkit-transform: translateY(-20px);
+  }
+  100%{
+  	-webkit-transform: translateY(0px);
+  }
+
+
+}
+.heading{
+	float:left;
+	width:100%;
+	border-bottom:1px solid #ddd;
+}
+.heading p{
+	font-size:60px;
+	color:#555;
+	font-weight: bold;
+	text-align: center;
+	line-height: 65px;
+	-webkit-font-smoothing:subpixel-antialiased;
+	text-rendering:geometricPrecision;
+	letter-spacing: -3px;
+	margin:0;
+	float: left;
+	opacity: 0.8;
+}
+.heading p:first-child{
+	color:#D80144;
+}	
+.heading p:nth-child(2){
+	color:#F7C623;
+}
+.heading p:nth-child(3){
+	color:#0194B6;
+}
+.heading p:nth-child(4){
+	color:#A6D53B;
+	/*D80144,F7C623,0194b6,a6d53b*/
+}
+.neon{
+	background:#333;
+	width:100%;
+	clear: both;
+	height:400px;
+}
+.neon p{
+
+	text-transform: uppercase;
+	font-size: 80px;
+	font-weight: bold;
+	color:#c6fa9e;
+	text-shadow:0 0px 5px #70f30c,0 0px 10px #b3f97d, 0 0px 30px rgba(0, 200, 0, 0.8),0 0px 60px rgba(0, 200, 0, 0.6);
+	padding-top: 180px;
+	text-align: center;
+	letter-spacing: 1px;
+	transition:all 1s ease-in;
+	-moz-transition:all 1s ease-in;
+	-webkit-transition:all 1s ease-in;
+	margin:0;
+}
+.neon p.orange{
+	color:#ffc155;
+	text-shadow:0 0px 5px #FFA200,0 0px 10px #ffae22, 0 0px 30px rgba(255, 162, 0, 0.8),0 0px 60px rgba(255, 162, 0, 0.6);
+}
+.experiment{
+	width:100%;
+	max-width:800px;
+	display: inline-block;
+	margin:100px 20px 0;
+	border:1px solid #888;
+	min-height:400px;
+	vertical-align: top; 
+}
+.listed{text-align: center;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		setInterval(function(){$('p#neon-text').toggleClass('orange');},5000);
+	})
+	
+</script>
+</head>
+<body class="subpage">
+	<div class="heading">
+		<p>L</p><p>A</p><p>B</p><p>S</p>
+	</div>
+	<div class="listed">
+	<div class="experiment">	
+	<pre class="codepen" data-height="400" data-type="result" data-href="uhwci" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/uhwci">Check out this Pen!</a></pre>
+<script async src="http://codepen.io/assets/embed/ei.js"></script>
+</div>
+	<div class="experiment">	
+
+	<pre class="codepen" data-height="400" data-type="result" data-href="hrIob" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/hrIob">Check out this Pen!</a></pre>
+	<script async src="http://codepen.io/assets/embed/ei.js"></script>
+	</div>
+	<div class="experiment">	
+		<pre class="codepen" data-height="400" data-type="result" data-href="Bgvob" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/Bgvob">Check out this Pen!</a></pre>
+	<script async src="http://codepen.io/assets/embed/ei.js"></script>
+	</div>
+	<div class="experiment"> 
+		<pre class="codepen" data-height="400" data-type="result" data-href="Ccmzn" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/Ccmzn">Check out this Pen!</a></pre>
+	<script async src="http://codepen.io/assets/embed/ei.js"></script>
+	</div>
+	<div class="experiment"> 
+		<pre class="codepen" data-height="400" data-type="result" data-href="cmyaj" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/cmyaj">Check out this Pen!</a></pre>
+	<script async src="http://codepen.io/assets/embed/ei.js"></script>
+	</div>	
+	<div class="experiment"> 
+		<pre class="codepen" data-height="400" data-type="result" data-href="iqKBf" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/iqKBf">Check out this Pen!</a></pre>
+	<script async src="http://codepen.io/assets/embed/ei.js"></script>
+	</div>
+	<div class="experiment">
+	
+	<div id="circle">
+
+	</div>
+	</div>
+	<div class="experiment">
+	
+	<div class="neon">
+		<p id="neon-text" class=""> NEON LIGHTS	</p>
+	</div>
+	<p style="float:right;font-size:11px;margin-top:-30px;">&copy; Sravan Kachavarapu 2012(<a style="color:#fff;"href="http://www.sravankacha.com" target="_blank">www.sravankacha.com</a>)</p>
+	</div>
+
+
+<div class="experiment">
+	
+<pre class="codepen" data-height="400" data-type="result" data-href="nquHB" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/nquHB">Check out this Pen!</a></pre>
+<script async src="http://codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="experiment">
+	
+<pre class="codepen" data-height="400" data-type="result" data-href="HrwBp" data-user="sravankacha" data-safe="true"><code></code><a href="http://codepen.io/sravankacha/pen/HrwBp">Check out this Pen!</a></pre>
+<script async src="http://codepen.io/assets/embed/ei.js"></script>
+	</div>
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

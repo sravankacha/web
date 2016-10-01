@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.fanfueled.com/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="homepage/css" rel="stylesheet" type="text/css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <meta property="og:image" content="//s3.amazonaws.com/fanfueled-engage-beta/images/fanfueled/banners/ff-icon-white.jpg">
+    <title>Home Page of FanFueled</title>
+    
+        <meta name="Keywords" content="Front-end, Javascript, Responsive, CSS3, parallax, Mobile friendly">
+        <meta name="Description" content="A FanFueled home page design with cool parallax effects and is responsive for mobile devices. Built using Css3 and Javascipt">
+    <link rel="icon" href="https://s3.amazonaws.com/fanfueled-events/Images/favicon.ico" type="image/vnd.microsoft.icon">
+        <link href="homepage/screen.css" rel="stylesheet" type="text/css">
+    <link href="homepage/header.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="homepage/720_grid.css" type="text/css" media="screen and (min-width: 720px)">
+    <link rel="stylesheet" href="homepage/986_grid.css" type="text/css" media="screen and (min-width: 986px)">
+    <link rel="stylesheet" href="homepage/1236_grid.css" media="screen and (min-width: 1236px)">
+    <!--[if lt IE 9 ]><link rel="stylesheet" href="https://s3.amazonaws.com/fanfueled-events/Stylesheets/IE-Responsive_grid.css" type="text/css"/><![endif]-->
+    <link href="homepage/jquery-ui-1.8.css" rel="stylesheet" type="text/css">
+    <script src="homepage/jquery.min.js"></script><style type="text/css"></style>
+    <script src="homepage/jquery-ui.min.js"></script>
+    <script src="homepage/alllibs.js" type="text/javascript"></script>
+    <script src="homepage/jsFunctions.js" type="text/javascript"></script>
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="https://s3.amazonaws.com/fanfueled-events/Scripts/css3-mediaqueries.js" type="text/javascript"></script> 
+        <script src="https://s3.amazonaws.com/fanfueled-events/Scripts/html5shiv.js"></script>
+    <![endif]-->
+        <link href="homepage/homepage.css" rel="stylesheet" type="text/css">
+        <script src="homepage/home-page.js" type="text/javascript"></script>
+        <script src="homepage/loopedslider.js" type="text/javascript"></script>
+    </head>
+<body>
+    <div style="position:fixed;top:0;left:0; width:100%; height:40px; background:#09c; color:#fff;z-index:999999;padding:10px 0;text-align:center;"><p>This Page is resposive and has parallax. Try resizing the browser to see responsiveness.</p></div>
+    <div class="outside" style="padding-top:40px;">
+        <div class="sitePage clearfix">
+            <div class="section0">
+    <div class="grid">
+        <div class="row" style="margin: 0;">
+            <div class="slot-0-1-2-3-4-5-6">
+                <header>
+                    <a href="javascript:void(0)" id="touchdropmenu" class="" onclick="ToggleMobileNav(this)">Menu</a>
+                    <div class="touch-menu">
+                        <ul id="touchdropmenu-options">
+                            <li class="touch-search">
+                                <form id="searchForm-touch">
+                                    <input autocomplete="off" data-type="search" id="search-touch" name="search" placeholder="find events" type="text">
+                                    <input type="submit" value="SEARCH" id="searchButton-touch">
+                                </form>
+                            </li>
+                            <li><a id="show-engages" href="javascript:void(0)">Play Engage</a></li>
+                            <li><a href="#">
+                                Shop</a></li>
+                            <li><a href="http://www.fanfueled.com/Event">
+                                Browse Events</a></li>
+                            <li><a href="http://www.fanfueled.com/EventWizard">
+                                Add your Event</a></li>
+                            <li><a href="http://fanfueledengage.com/info/contactus">
+                                Create a brand page</a></li>
+                        </ul>
+                    </div>
+                    <a class="logo hide-text" href="homepage/FanFueled is a Collaborative Marketing Community.htm">FanFueled</a>
+                    <nav>
+                        <div class="eyebrow-nav">
+                            <a href="http://fanfueledengage.com/info/contactus">
+                                Create a brand page</a>
+                            <a href="http://www.fanfueled.com/EventWizard">Add your event</a>
+                            <p>
+                                Promoters:</p>
+                            <div class="cart-items">
+                            </div>
+                        </div>
+                        <div class="nav-left-col">
+                            <ul>
+                                <li><a href="http://www.fanfueled.com/Event" id="browse-evnts">
+                                    Browse Events</a></li>
+                                <li id="header-search-box">
+                                    <form id="searchForm">
+                                    <input autocomplete="off" data-type="search" id="search" name="search" placeholder="find events" type="text">
+                                    <input type="submit" value="" id="searchButton">
+                                    </form>
+                                </li>
+                                    <li class="engage-drop active" id="engagedrop">
+                                        <a href="javascript:void(0)" id="play" data-href="#engage-dropmenu" onclick="$(this).menumagic()">Play Engage</a>
+                                    <div class="my-engage-drop tipsy loggedin-state" id="engage-dropmenu" style="display: none;">
+                                            <div class="program-filter-box">
+                                                <input type="text" class="prog-search" placeholder="search programs..">
+                                                <div class="prog-filters">
+                                                    <span class="prog-new prog-fil act" data-sort="engage-element-program-id">Newest</span>
+                                                    <span class="prog-az" data-sort="engage-element-title">A-Z</span> <span class="prog-za" data-sort="engage-element-title">Z-A</span> 
+            <span class="prog-fil inactive">Points</span>                                                </div>
+                                            </div>
+                                        <div class="my-engage-drop-left" id="engage-menu-drop" style="overflow: hidden; padding: 0px; width: 100px;">
+                                            
+                                        <div class="engage-elements-container">
+                                                    <a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/xtreme.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">FanFueled EXTREME</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/fit.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">FanFueled FIT</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/glamour.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">FanFueled GLAMOUR</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/jetsetter.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">FanFueled JETSETTER</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/office.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">FanFueled OFFICE</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/weird.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">FanFueled WEIRD</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/DePuy36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">DePuy Synthes Sports Injury Prevention Program</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/3.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Recess</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/Mushroom36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Infected Mushroom</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/acs36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Auto Club Speedway</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/LotteryHub36x36.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">LotteryHUB</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/TGT36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">TGT</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/Decibel36x36.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Decibel Festival</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/LI.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Liquid Ice</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/OTG36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">On the Grind Management</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/FantasyIsland36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Fantasy Island</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/icon.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">The Locals</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/fanfueledicon.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Fueled By Ramen</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/benson36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Brendan Benson</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/CCU36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">The Comedy Corner Underground</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/signalfy36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">SIGNALFY</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/X Games 36x36 3.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">X Games Austin</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/JOOSE 36x36 TWO.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">JOOSE</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/scenetap75x75.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">SceneTap</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/Underground Program Icon.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">East Nashville Underground</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/CounterPoint36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">MCP Presents</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/Monsters36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Missouri Monsters</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/Sig99 36x36.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Signal 99</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/JV36.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Jimmy Valentine's Lonely Hearts Club</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/LMW36.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Little Miss Whiskey's Golden Dollar</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/FOURLoko36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Four Loko</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/LiveScene 36x36.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Live Scene</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/street-cred36x36.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">Street Cred</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/Roxy_Favicon.jpg">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">The Roxy Theater</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="javascript:void(0)">
+                                                        <div class="block engage-element">
+                                                            <img class="engage-element-thumb" src="homepage/ff-favicon.png">
+                                                            <div class=" engage-element-detail">
+                                                                <span class="engage-element-title">FanFueled</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                    </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-right-col" id="nav-rt-col">
+                                <div class="login-signup">
+                                    <a id="login-btn" href="javascript:void(0)">Log In</a> <span class="nav-divider">|</span> <a id="signup-btn" href="javascript:void(0)">Sign up</a>
+                                </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </div>
+    <div class="message-modal" id="login-modal">
+        <a href="javascript:void(0)" id="popup-close" title="close"></a>
+        <div class="referral-message">
+            <p class="login-msg">
+                Log in to FanFueled and start earning rewards</p>
+            <p class="signup-msg" style="display: none;">
+                Sign Up for FanFueled and start earning rewards</p>
+            <span class="alternate-method">Dont Have an Account? <a href="javascript:void(0)" id="alt-signup">Sign
+                Up</a></span> <span class="alternate-method" style="display: none;">Already Have an
+                    Account? <a href="javascript:void(0)" id="alt-login">Log In</a></span> <span class="umf-terms" style="display: none;">
+                        <br>
+                        By signing up for FanFueled, you are agreeing to the <a href="http://www.fanfueledengage.com/Info/Terms#tickets-tos" target="_blank">Terms and Conditions.</a></span>
+        </div>
+        <div class="login-signup">
+            <ul class="tabs" style="">
+                <li id="login-tab" class="active">Log in</li>
+                <li id="signup-tab" class="">Sign Up</li>
+            </ul>
+            <div class="login-form">
+                <span class="errorspan"></span>
+                <form action="http://www.fanfueled.com/User/FrontPageLogin" method="post">
+                <label class="input login-email">
+                    <input type="text" name="EmailForLogin" id="loginEmail" title="Email" required="required" placeholder="Email">
+                </label>
+                <label class="input login-password">
+                    <input type="password" name="Password" id="loginPassword" title="Password" required="required" placeholder="Password">
+                </label>
+                <input type="submit" value="Log In" class="login-button" id="login-button" onclick="return validateLogin()">
+                <label class="rememberme">
+                    <input checked="checked" id="IsRememberMe" name="IsRememberMe" type="checkbox" value="true"><input name="IsRememberMe" type="hidden" value="false">Remember Me</label>
+                <a href="http://www.fanfueled.com/User/Login?forgot=1" class="forgotpass">Forgot password?</a>
+                </form>
+                <div class="hr-or ">
+                    <div class="hr-or-text">
+                        or</div>
+                </div>
+                <div class="connect-social" onclick="LogIntoFacebook();return false;">
+                    Connect with Facebook
+                </div>
+            </div>
+            <div class="signup-form" id="signup-form">
+                <form method="POST" action="http://www.fanfueled.com/User/FrontPageRegister">
+                <span class="errorspan"></span>
+                <label class="input signup-firstname">
+                    <input type="text" name="FirstName" id="registerFirst" title="First Name" required="required" placeholder="First Name">
+                </label>
+                <label class="input signup-lastname">
+                    <input type="text" name="LastName" id="registerLast" title="Last Name" required="required" placeholder="Last Name">
+                </label>
+                <label class="input signup-email">
+                    <input type="text" name="Email" id="registerEmail" title="Email" required="required" placeholder="Email">
+                </label>
+                <label class="input signup-password">
+                    <input type="password" name="Password" id="registerPassword" title="Password" required="required" placeholder="Password">
+                </label>
+                <input type="submit" class="create-login" value="Create Account" onclick="return validateRegister();">
+                </form>
+                <div class="hr-or ">
+                    <div class="hr-or-text">
+                        or</div>
+                </div>
+                <div class="connect-social" onclick="LogIntoFacebook();return false;">
+                    Connect with Facebook
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var optns = {
+        valueNames: ['engage-element-title', 'engage-element-score', 'engage-element-program-id'],
+        listClass: 'engage-elements-container',
+        searchClass: 'prog-search'
+    };
+    var progList = new List('engage-dropmenu', optns);
+    function clearsearchfilter() {
+        progList.search();
+        $(".prog-search").val("");
+    }
+    $('.prog-az').click(function () {
+        clearsearchfilter();
+        progList.sort('engage-element-title', { asc: true });
+    });
+    $('.prog-za').click(function () {
+        clearsearchfilter();
+        progList.sort('engage-element-title', { asc: false });
+    });
+    $('.prog-new').click(function () {
+        clearsearchfilter();
+        progList.sort('engage-element-program-id', { asc: false });
+    });
+    $('.prog-pts').click(function () {
+        clearsearchfilter();
+        progList.sort('engage-element-score', { asc: false });
+    });
+    $('.prog-filters span').not('.inactive').click(function () {
+        if (!$(this).hasClass('act')) {
+            $(this).addClass('act');
+        }
+        $('.prog-filters span').not($(this)).removeClass('act');
+    });
+    function validateRegister() {
+        var isValid = true;
+        var firstName = $('#registerFirst');
+        var lastName = $('#registerLast');
+        $('.signup-form').find('input[required="required"]').each(function () {
+            if ($(this).val() == '') {
+                isValid = false;
+                $(this).css({ 'border-color': 'red', 'background-color': '#fee' });
+            }
+            else {
+                $(this).css({ 'border-color': '', 'background-color': '' });
+                $('.errorspan').hide();
+            }
+        });
+        if (!isNameValid(firstName.val())) {
+            isValid = false;
+            $(firstName).css({ 'border-color': 'red', 'background-color': '#fee' });
+            showError('Please enter a valid first name');
+        } else {
+            $(firstName).css({ 'border-color': '', 'background-color': '' });
+        }
+        if (!isNameValid(lastName.val())) {
+            isValid = false;
+            $(lastName).css({ 'border-color': 'red', 'background-color': '#fee' });
+            showError('Please enter a valid last name');
+        } else {
+            $(lastName).css({ 'border-color': '', 'background-color': '' });
+        }
+        if ($('#registerPassword').val().length < 6) {
+            isValid = false;
+            showError('Password must be at least 6 characters');
+            $('#registerPassword').css({ 'border-color': 'red', 'background-color': '#fee' });
+        } else {
+            $('#registerPassword').css({ 'border-color': '', 'background-color': '' });
+        }
+        regEmail = $('#registerEmail').val();
+        var url = "/Services/ValidateEmail?email=" + regEmail;
+
+        $.ajax({
+            url: url,
+            success: function (data) {
+                if (data == false || !validateEmail(regEmail)) {
+                    isValid = false;
+                    showError("Please enter a valid email address");
+                    $('#registerEmail').css({ 'border-color': 'red', 'background-color': '#fee' });
+                }
+            },
+            async: false
+        });
+        $("#registerConfirmPassword").val($("#registerPassword").val());
+        return isValid;
+    }
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+    function searchEvents(searchText) {
+        if (searchText != '') {
+            window.location = '/Event/SearchEvents?searchVal=' + searchText + '&searchType=title';
+        }
+    }
+
+    $("#searchButton").click(function () {
+        var searchText = $("#search").val();
+        searchEvents(searchText);
+    });
+    $("#searchButton-touch").click(function () {
+        var searchText = $("#search-touch").val();
+        searchEvents(searchText);
+    });
+
+    $("#searchForm").submit(function () {
+        var searchText = $("#search").val();
+        searchEvents(searchText);
+        return false;
+    });
+    $("#searchForm-touch").submit(function () {
+        var searchText = $("#search-touch").val();
+        searchEvents(searchText);
+        return false;
+    });
+
+    function validateLogin() {
+        var isValid = true;
+
+        $('.login-form').find('input[required="required"]').each(function () {
+            if ($(this).val() == '' ||
+                $(this).val() == 'Email') {     //Validate the default texts for IE9 placeholder
+                isValid = false;
+                $(this).css({ 'border-color': 'red', 'background-color': '#fee' });
+                $('.errorspan').text('That is not a valid username/ password.').show();
+            }
+            else {
+                $(this).css({ 'border-color': '', 'background-color': '' });
+            }
+        });
+
+        return isValid;
+    }
+    function showError(msg) {
+        $('.errorspan').text(msg).show();
+    }
+
+    function getParameterByNameFromSrc(name, src) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + name + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(src);
+        if (results == null)
+            return "";
+        else
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function getParameterByName(name) {
+        return getParameterByNameFromSrc(name, window.location.search);
+    }
+
+    function isNameValid(name) {
+        var letters = /^[A-Za-z]+$/;
+        if (name != 'First Name' || name != 'Last Name') {
+            if (letters.test(name)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    };
+    $(document).ready(function () {
+
+        if (getParameterByName('exists') == '1') {
+            showMessage('Your email already exists in our system.', 'Please try again', 'info');
+            $('#login-btn').trigger('click');
+
+        } else if (getParameterByName('invalid') == '1' || getParameterByName('error') == '1') {
+            showMessage('Login Failed.', 'Please try again', 'error');
+            $('#login-btn').trigger('click');
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        // TOGGLE MENUS
+        $.fn.menumagic = function () {
+            var dd = $(this).attr("data-href"); //find the menu drop div
+            $('.tipsy').not(dd).hide(); //hide all other dropped menus except one thats open
+            if (!$(this).hasClass('active')) {
+                $(dd).toggle();
+            }
+        };
+        $('body').bind('click', function (e) {
+            if ($(e.target).closest('header').length == 0) {
+                $('.tipsy').hide();
+            }
+        });
+        $('.login-form input, .signup-form input').placeholder(); //placeholder support for IE/old browsers
+    });
+
+    //----------------------MODAL JS--------------------------
+
+    //code for modal popup -Sravan (09-13-2012)
+        var dh = $(window).height(), dw = $(window).width(), Zdiv = "<div class='zoom-box' />", z = $('.zoom-box'), vis = "visible", ns = "noscroll", hb = $("html , body"), zu = "z-up";
+        function popThis(obj) { var p = $(obj); p.wrap(Zdiv); p.parent().addClass(vis); hb.addClass(ns); p.addClass(zu); setPosition(p); };
+        function setPosition(obj) {
+            var p = $(obj), ph = p.outerHeight(), pw = p.outerWidth(), L = p.offset().left, T = p.offset().top,
+			ML = (L > 0) ? -pw / 2 : 0, MT = ((dh - ph) > 0) ? -ph / 2 : -(dh / 2 - 20);
+            p.css({ 'margin-top': MT, 'margin-left': ML });
+            //        if ((ph - T*2) > 0) {
+            //            p.offset({top: 0, left: L});
+            //        }
+        };
+        function closePop() {
+            var p = $(".z-up");
+            z.removeClass(vis);
+            hb.removeClass(ns);
+            p.attr('style', '');
+            p.unwrap();
+            p.removeClass(zu);
+        };
+        $(document).ready(function () {
+        //-End code for popup---------------------       
+        $('#login-btn').click(function () { popThis('#login-modal'); $('#login-tab').click(); });
+        $('#signup-btn').click(function () { popThis('#login-modal'); $('#signup-tab').click(); });
+        $('#popup-close').click(function () {
+            closePop();
+        });
+        // Show engages for tablets
+        var engs = $('#engage-dropmenu');
+        var engspar = $('#engage-dropmenu').parent();
+        var close = "<a href='#' id='engages-close' title='close' onclick='$(this).reset()'></a>";
+        $('#show-engages').click(function () {
+            ToggleMobileNav($("#touchdropmenu"));
+            engs.prepend(close);
+            $('.slot-0-1-2-3-4-5-6').append(engs);
+            popThis(engs);
+
+        });
+        $.fn.reset = function () {
+            closePop();
+            $(engspar).append(engs);
+            $('#engages-close').remove();
+        };
+
+    });
+
+    $(document).ready(function () {
+        $('#login-tab, #signup-tab').click(function () {
+            var bol = $(this).hasClass('active');
+            if (!bol) {
+                $('div.login-form, div.signup-form').slideToggle(300, 'linear');
+                $('#login-tab, #signup-tab').toggleClass('active');
+                $('.alternate-method, .umf-terms, .login-msg, .signup-msg').toggle();
+            }
+            else {
+                return false;
+            }
+        });
+        $('#alt-signup').click(function () { $("#signup-tab").click(); });
+        $('#alt-login').click(function () { $("#login-tab").click(); });
+         $('.my-engage-drop').bind('mousewheel DOMMouseScroll', function (e) {
+            var delta = e.wheelDelta || -e.detail;
+            this.scrollTop += (delta < 0 ? 1 : -1) * 30;
+            e.preventDefault();
+         });
+
+    });
+    function ToggleMobileNav(obj) { 
+        var flag = $(obj).hasClass("open");
+        if (!flag) {
+            $("html").css({ "position": "relative", "overflow": "hidden" }).animate({ "left": "200px" }, 500);
+            $(obj).addClass("open");
+        } else {
+            $("html").css({ "position": "relative", "overflow": "auto" }).animate({ "left": "0" }, 500);
+            $(obj).removeClass("open");
+        }
+    }
+    Modernizr.addTest('cookies', function () {
+        // Quick test if browser has cookieEnabled host property
+        if (navigator.cookieEnabled) return true;
+        // Create cookie
+        document.cookie = "cookietest=1";
+        var ret = document.cookie.indexOf("cookietest=") != -1;
+        // Delete cookie
+        document.cookie = "cookietest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT";
+        return ret;
+    });
+</script>
+
+<div id="mainContent" class="clearfix">
+                
+                <!--[if lt IE 9 ]><style type="text/css">
+    body{
+        
+    }    
+    .section1{
+        background-color:#494b4b !important;
+    }
+    .section1 .slot-0-1-2-3{
+        
+        float:left;
+    }
+    .section1 .slot-4-5{
+        float:right;
+    }
+    .section2{
+        background-image:url(https://s3.amazonaws.com/fanfueled-events/Images/blue.jpg) !important;
+        background-repeat:repeat-x !important;
+        background-position:top center !important;
+        background-color:transparent !important;
+    }
+    .section4{
+        background-image:url(https://s3.amazonaws.com/fanfueled-events/Images/soil.png) !important;
+        background-repeat:repeat-x !important;
+        background-position:center 0px !important;
+        background-color:transparent !important;
+    }
+    .tos-pp{
+        height:20px !important;
+    }
+</style><![endif]-->
+<div class="maincontent">
+    <div class="section1 ">
+        <div class="grid">
+            <div class="row">
+                <div class="slot-0-1-2-3">
+                    <div class="home-page-slider" id="homePageSlider">
+                        <div class="container">
+                            <div class="slides" style="width: 2980px; left: 0px;">
+                                <div class="slide1 slide" style="width: 596px; position: absolute; left: 0px; display: block;">
+                                    <h5>
+                                        What’s this all about?</h5>
+                                    <p>
+                                        Our community: fans, artists, teams, brands &amp; event organizers all connected
+                                        by a common thread ...passion &amp; gratitude</p>
+                                    <ul class="links">
+                                        <li><a href="http://www.fanfueled.com/EventWizard">Add an event »</a></li>
+                                        <li><a href="http://fanfueledengage.com/Info/ContactUs">Add a brand »</a></li>
+                                            <li><a href="javascript:void(0)" onclick="$(&#39;#signup-btn&#39;).trigger(&#39;click&#39;); return false;">Sign up »</a></li>
+                                    </ul>
+                                </div>
+                                <div class="slide2 slide" style="width: 596px; position: absolute; left: 596px; display: block;">
+                                    <h5>
+                                        Reward for influence</h5>
+                                    <p>
+                                        Brands reward their most influential fans. Fans get compensated for their passion.
+                                          <a href="http://fanfueledengage.com/Info/ContactUs">Create a brand page »</a>
+                                    </p>
+                                </div>
+                                <div class="slide3 slide" style="width: 596px; position: absolute; left: 1192px; display: block;">
+                                    <h5>
+                                        Brands engaging now!</h5>
+                                    <div class="brands-animation">
+                                        <ul>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/Fitz200x145.jpg" alt="Fitz And The Tantrums">
+                                                </a>
+                                              </li>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/BOB200x145.jpg" alt="12 Days of Underground Luxury">
+                                                </a>
+                                              </li>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/Movement200x145.jpg" alt="Movement 2014">
+                                                </a>
+                                              </li>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/AngelsPerch200x145.png" alt="Angel&#39;s Perch">
+                                                </a>
+                                              </li>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/Shinedown200x145.png" alt="Shinedown">
+                                                </a>
+                                              </li>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/BOB200x145(1).jpg" alt="B.o.B">
+                                                </a>
+                                              </li>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/miesa200x145.jpg" alt="Miesa">
+                                                </a>
+                                              </li>
+                                              <li class="">
+                                                <a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/Electric City 200x145.png" alt="Electric City">
+                                                </a>
+                                              </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slide4 slide" style="width: 596px; position: absolute; left: 1788px; display: block;">
+                                    <h5>
+                                        Value Your Voice </h5>
+                                        <p>
+                                            Shop for your favorite things and share them with friends. When you inspire others
+                                            to check them out, we pay you cash! Browse our Kiosks below.</p>
+                                    <div class="brands-animation">
+                                        <ul>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/homeandgarden200x145.jpg" alt="Home and Garden">
+                                                </a></li>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/outdoors200x145.jpg" alt="Outdoors">
+                                                </a></li>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/surf200x145.jpg" alt="Surf">
+                                                </a></li>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/GiftGuide200x145.jpg" alt="Holiday Gift Guide">
+                                                </a></li>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/FFEco200x145.jpg" alt="FanFueled ECO">
+                                                </a></li>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/Xtreme200x145.jpg" alt="FanFueled EXTREME">
+                                                </a></li>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/FFFit200x145.jpg" alt="FanFueled FIT">
+                                                </a></li>
+                                                <li class=""><a href="javascript:void(0)">
+                                                    <img class="brand-image" src="homepage/glamour200x145.jpg" alt="FanFueled GLAMOUR">
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slide5 slide" style="width: 596px; position: absolute; left: -596px; display: block;">
+                                      <h5>
+                                       True Impact</h5>
+                                    <p>
+                                        The more you share the more you earn. Get started today!
+                                        <a href="javascript:void(0)" onclick="$(&#39;#signup-btn&#39;).trigger(&#39;click&#39;); return false;">Sign up now »</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="hp-pagination">
+                            <li class="active"><a href="javascript:void(0)" rel="1">1</a></li>
+                            <li class=""><a href="javascript:void(0)" rel="2">2</a></li>
+                            <li class=""><a href="javascript:void(0)" rel="3">3</a></li>
+                            <li class=""><a href="javascript:void(0)" rel="4">4</a></li>
+                            <li class=""><a href="javascript:void(0)" rel="5">5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slot-4-5">
+<div class="home-page-leaderboard">
+    <div class="prize-stats">
+        <h2>OUR MEMBERS HAVE EARNED</h2>
+            <div class="text-center">
+                <span id="paidOut">$ 12261.34</span>
+                <p>CASH</p>
+            <span id="prizesRedeemed">2446</span><p> PRIZES</p>
+            </div>
+      </div>
+           <div class="leader-board">
+            <ul id="vertical-ticker" style="overflow: hidden;">                
+                    
+                    
+                    <li class="lb-item">
+                        <img alt="Kayla R" src="https://graph.facebook.com/1203450062/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: LOKO LOOT WOOT! Win a Poco Loko  Corn Hole Toss! 
+                            </p>
+                            <p class="user-name">
+                                Kayla R
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/fourloko">Four Loko</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 2:45:19 AM">
+                    </li>
+                    <li class="lb-item">
+                        <img alt="Erica H" src="https://graph.facebook.com/100000107008134/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: Win a Four Loko T-Shirt!
+                            </p>
+                            <p class="user-name">
+                                Erica H
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/fourloko">Four Loko</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 2:46:59 AM">
+                    </li>
+                    <li class="lb-item">
+                        <img alt="Alex C" src="https://graph.facebook.com/1155325993/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: 2 Tickets to Syke event OR 1 ticket to Vans Warped Tour (VA Beach date only)
+                            </p>
+                            <p class="user-name">
+                                Alex C
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/syke">Fight Fire With Fire</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 2:49:01 AM">
+                    </li>
+                    <li class="lb-item">
+                        <img alt="jennifer f" src="https://graph.facebook.com/827660433/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: TANK TOP!
+                            </p>
+                            <p class="user-name">
+                                jennifer f
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/liquidice">Liquid Ice</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 2:53:47 AM">
+                    </li>
+                    <li class="lb-item">
+                        <img alt="Yelena L" src="https://graph.facebook.com/729695460/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: THE BOSS T SHIRT!
+                            </p>
+                            <p class="user-name">
+                                Yelena L
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/liquidice">Liquid Ice</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 3:00:11 AM">
+                    </li>
+                    <li class="lb-item">
+                        <img alt="Marge B" src="https://graph.facebook.com/100000599255924/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: BOY SHORTS!
+                            </p>
+                            <p class="user-name">
+                                Marge B
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/liquidice">Liquid Ice</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 3:23:27 AM">
+                    </li>
+                    <li class="lb-item">
+                        <img alt="Layla G" src="https://graph.facebook.com/100001109200331/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: BLUE CAP!
+                            </p>
+                            <p class="user-name">
+                                Layla G
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/liquidice">Liquid Ice</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 3:24:14 AM">
+                    </li>
+                    <li class="lb-item">
+                        <img alt="Timothy F" src="https://graph.facebook.com/1574790007/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: Skype Session With Memphis May Fire (GRAND PRIZE RAFFLE)
+                            </p>
+                            <p class="user-name">
+                                Timothy F
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/syke">Fight Fire With Fire</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 3:26:52 AM">
+                    </li>
+            <li class="lb-item" style="margin-top: 0px;">
+                        <img alt="Leanne H" src="https://graph.facebook.com/720416206/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: LOKO LOOT WOOT! Win a Poco Loko  Corn Hole Toss! 
+                            </p>
+                            <p class="user-name">
+                                Leanne H
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/fourloko">Four Loko</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 2:45:15 AM">
+                    </li><li class="lb-item" style="margin-top: 0px;">
+                        <img alt="Casey E" src="https://graph.facebook.com/697165190/picture ">
+                        <div class="user-info">
+                            <p class="action-name">
+                                Redeemed: LOKO LOOT WOOT! Win a Poco Loko  Corn Hole Toss! 
+                            </p>
+                            <p class="user-name">
+                                Casey E
+                            </p>
+                            <span class="actionDateDisplay">1 hours ago - <a href="http://fanfueledengage.com/fourloko">Four Loko</a></span>
+                        </div>
+                        <input type="hidden" class="itemDate" value="12/18/2013 2:45:18 AM">
+                    </li></ul>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#vertical-ticker').totemticker({
+            row_height: '78px',
+            direction: 'up',
+            interval: 5000
+        });
+    });
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section2 skies" style="top: 0px; background-position: 35.3% 238.8px, 60.91% 120px, 0px -300px, 0px 0px, 0px -400px;">
+        <div class="grid">
+            <div class="row">
+                <div class="slot-0-1">
+                    <div class="about-blob">
+                        <h2>
+                            Value your voice.</h2>
+                        
+                                <p>
+                                    Join the FanFueled community and earn awesome perks, prizes, experiences... and yes, cash for doing what you do every day.
+                                </p>
+                                <p>The more you share and contribute to the community, the more you earn.</p>
+                    </div>
+                </div>
+                <div class="slot-2-3">
+                    <div class="about-blob" style="top: 61.8px;">
+                        <h2>
+                            Sharing is powerful.</h2>
+                       <p> FanFueled is a collaborative marketing platform that allows brands to compensate and reward consumers for their advocacy and engagement.</p>
+
+<p>FanFueled is a community where you go to discover brands and experiences from the people you know and trust.</p>
+
+<p>We convert your social currency into cash.</p>
+                        
+                    </div>
+                </div>
+                <div class="slot-4-5">
+                    <div class="row">
+                        <div class="about-blob">
+                            <h2>
+                                Amplify.</h2>
+                            <p>
+                                Fans earn cash &amp; rewards by completing simple customizable actions that contribute to the growth of the community.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" id="arrrgh-row">
+                        <div class="about-blob">
+                            <h2>
+                                Arrrgh!</h2>
+                            <p>
+                                Tired of pluggin yer marketing cash into ineffective, traditional channels?</p>
+                            <a href="http://www.fanfueled.com/Home/Contact">Contact us »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section3 ocean" style="background-position: 82.91% 200px;">
+        <div class="ocean-anim">
+            <div class="ship-anim">
+                <img class="" src="homepage/ship.png">
+            </div>
+        </div>
+        <div class="grid">
+            <div class="row">
+                <div class="slot-0-1">
+                    <div class="about-blob" style="padding-top: 33px;">
+                        <h2>
+                            A deeper dive.</h2>
+                        <p>
+                            Ignite the power of the FanFueld community by engaging with fans who LOVE your product!
+                        </p>
+                        <p>
+                            Reward true influencers and enjoy one of the highest percentage of sharing in the
+                            live event industry!
+                        </p>
+                    </div>
+                </div>
+                <div class="slot-2-3">
+                    <div class="about-blob">
+                    </div>
+                </div>
+                <div class="slot-4-5 fl-rt">
+                    <ul class="links">
+                        <li><a href="http://www.fanfueled.com/EventWizard">Add an event »</a></li>
+                        <li><a href="http://fanfueledengage.com/Info/ContactUs">Add a brand »</a></li>
+                            <li><a href="javascript:void(0)" onclick="$(&#39;#signup-btn&#39;).trigger(&#39;click&#39;); return false;">Sign up »</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section4 soil">
+        <div class="grid">
+            <div class="row">
+                <div class="slot-0-1">
+                    <div class="footer-links">
+                        <h2>
+                            Rooted in Chicago.</h2>
+                        <ul class="links">
+                            <li><a href="http://www.fanfueled.com/Home/About">About Us</a></li>
+                            <li><a href="http://www.fanfueled.com/Home/Contact">Contact us</a></li>
+                        <li><a href="http://www.fanfueled.com/Home/FAQ">FAQ's</a></li>
+                            <li><a href="http://www.fanfueled.com/Home/Team">
+                                Our team</a></li>
+                            <li><a href="http://www.fanfueled.com/EventWizard">
+                                Add an event</a></li>
+                            <li><a href="http://www.fanfueled.com/Home/Contact">Create an engage</a></li>
+                            <li><a href="http://www.fanfueled.com/Home/Press">
+                                Press</a></li>
+                            <li><a href="http://fanfueled.wordpress.com/">Blog</a></li>
+                            <li><p style="color:Gray">Disclosure: Compensated Affiliate</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slot-2-3-4">
+                    <div class="press">
+                        <h2>
+                            The latest dirt..</h2>
+                        <p>
+                            Who's talking about us</p>
+                        <ul class="press-links">
+                            <li><a href="http://www.chicagoreader.com/chicago/ticketmaster-alternative-fanfueled-anderson-bell/Content?oid=2699814" class="mag-logo" id="chi-rdr" target="_blank">Chicago Reader</a></li>
+                            <li><a href="http://www.inc.com/magazine/201203/jennifer-alsever/companies-taking-on-ticketmaster.html" class="mag-logo" id="inc-mag" target="_blank">Inc. Magazine</a></li>
+                            <li><a href="http://www.timeoutchicago.com/music-nightlife/music/95556/the-revolution-will-not-be-service-charged" class="mag-logo" id="to-chi" target="_blank">TimeOut Chicago</a></li>
+                            <li><a href="http://techcrunch.com/2011/11/16/fanfueled/" class="mag-logo" id="techcrnh" target="_blank">TechCrunch</a></li>
+                            <li><a href="http://therealtimereport.com/2011/11/23/social-event-ticketing-platform-rewards-fans-for-influencing-sales/" class="mag-logo" id="rltm-rep" target="_blank">Realtime Report</a></li>
+                            <li><a href="http://miccontrol.com/#/micschool/fanfueled-a-viable-solution-to-the-ticketmaster-dilema/" class="mag-logo" id="mic-ctrl" target="_blank">MicControl</a></li>
+                            <li id="more-press"><a href="http://www.fanfueled.com/Home/Press">
+                                View all press</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="deepsea-drill" id="" style="left: 1015.5px;">
+                <img src="homepage/bubbles-top.png" id="bubble-top">
+                <img src="homepage/bubbles-mid.png" id="bubble-mid">
+                <img src="homepage/bubbles-bottom.png" id="bubble-btm">
+                <img src="homepage/worker.png" id="worker">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tos-pp">
+    <a href="http://www.fanfueled.com/Home/_privacy">Privacy Policy</a> <a href="http://www.fanfueled.com/Home/_tos">Terms of Service</a>  
+</div>
+<!--<div class="height-depth">
+    <p>
+        Height:</p>
+    <span id="ht-dp">12000</span>
+    <h4 id="pix">
+    </h4>
+</div>-->
+<div class="diving-anime">
+    <img src="homepage/spool.png" id="spool" style="top: 330px; left: 418.5px;">
+    <img src="homepage/thread.png" id="thread" style="top: 380px; left: 438.5px; clip: rect(0px 5px 830px 0px);" class="">
+    <img src="homepage/climber.png" id="climber" style="top: 630.9000244140625px; left: 418.5px;">
+    <img src="homepage/diver.png" id="diver" style="top: 1180px; left: 378.5px;" class="">
+</div>
+
+<div id="bubblefloat" class="origin"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="message" style="top: -73px;">
+        <h3 id="message1">
+        </h3>
+        <p id="message2">
+        </p>
+    </div>
+    <div id="no-cookie" style="display:none">
+        <p>
+            This site requires cookies to be enabled in order to work correctly.
+            Please go into your browser preferences and enable cookies</p>
+    </div>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#engage-menu-drop').jScrollPane({ autoReinitialise: true, autoReinitialiseDelay: 100 });
+            if (!$('html').hasClass('cookies')) {
+                $('#no-cookie').show();
+            }
+        });
+    </script>
+
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="bubblefloat" class="dup" style="top: 1034.68410015px;"></div><div id="bubblefloat" class="dup" style="top: 2395.03889985px;"></div></body></html>

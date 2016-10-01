@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="KEYWORDS" content="Sravan Kachavarapu, User Experience Architect, UI Designer, HTML, CSS, JavaScript, portfolio,UX, UI Resume, About, Contact, Work, Projects, Social media, email" />
+		<meta name="DESCRIPTION" content="Contact me for solving your UI /UX problems." />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />		
+		<link rel="stylesheet" href="css/nyroModal.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			$("document").ready(function() {
+				checkNav();			
+				 $('#contact').click(function(){
+					$('.contact').animate({
+						'left':'-100%'
+					}, 1000);				   
+				 });
+				 function checkNav(){
+					var wide =  $(document).outerWidth();
+					if(wide < 790){
+						$(".nav").removeClass("desktop").addClass("mobile");
+					}else{
+						$(".nav").removeClass("mobile").addClass("desktop");
+					}
+				}
+				$(window).resize(function () {
+			        checkNav();
+			    });
+			    // Remove parallax scroll for screen widths less than 720px
+			    $(window).bind('scroll', function (e) {
+			        var scrollX = $('body').scrollTop();
+			        if (scrollX < 600) {
+			            $("body").css('background-position', (scrollX * 0.5) +' -200px');
+			        }
+			    });
+			});
+		</script>
+	</head>
+	<body style="background:#3e454f">
+	<div class="nav desktop">
+		<a href="#" class="logo" title="Sravan Kachavarapu">
+			<span>SK</span>
+			<h1>Sravan Kachavarapu</h1>
+		</a>
+		<a href="javascript:void(0)" class="nav-icon"></a>
+		<div class="nav-list">
+			<ul class="verMenu">
+				<li><a href="/" id="home" data-hover="Home">Home</a></li>
+				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
+				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
+				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>	
+	<footer class="contact" style="margin:auto; position:absolute; top:0; bottom:0; left:auto; right:auto;">
+		<div class="card" style="position:absolute; top:50%; left:50%;margin-left:-250px; margin-top:-100px">
+			<div class="name">
+				<p>Sravan Kachavarapu</p>
+				<span>sravankacha [at] gmail.com</span>
+			</div>
+			<div class="socialmedia">
+				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="images/FACEBOOK.png" height="30" width="30"/></a>
+				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="images/TWITTER.png" height="30" width="30"></a>
+				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="images/GOOGLE+.png" height="30" width="30"/></a>
+				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="images/LINKEDIN.png" height="30" width="30"/></a>
+			</div>
+		</div>
+	</footer>
+	</body>
+</html>

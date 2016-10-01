@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sravan Kachavarapu, An UI/UX Designer</title>
+		<meta charset="utf-8" />
+		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="google-site-verification" content="rAwaUoRh8isWE5VLWZ1gu9gTx7GMJ9R6_Jhxz74wOos" />
+		<meta name="KEYWORDS" content="Sravan Kachavarapu, Portfolio,UI Projects, UX projects, User Experience Architect, UI Designer, HTML, CSS, JavaScript,UX, UI" />
+		<meta name="DESCRIPTION" content="Hello! I am Sravan. I am an UI/UX designer. I solve user experience problems with design and code. My passion is to deliver better user-experiences through simplicity and performance." />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />		
+		<link rel="stylesheet" href="css/nyroModal.css" type="text/css" media="screen" />
+	</head>
+	<body>
+	<header class="nav desktop">
+		<a href="#" class="logo" title="Sravan Kachavarapu">
+			<span>SK</span>
+			<h1>Sravan Kachavarapu</h1>
+		</a>
+		<!-- <div class="left-img"><img src="images/me.JPG" alt="Sravan Kachavarapu" title="Sravan Kachavarapu"/></div> -->
+		<a href="javascript:void(0)" class="nav-icon"></a>
+		<div class="nav-list">
+			<ul class="verMenu">
+				<li><a href="javascript:void(0)" id="home" data-hover="Home">Home</a></li>
+				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
+				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
+				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="content btcf">
+	<ul class="thelist">
+		<li><a href="http://mkcrcu.axshare.com/" target="_blank">FanFueled New Home Page</a></li>
+		<li><a href="http://6ha53b.axshare.com/" target="_blank">FanFueled New Home Page (Mobile Wireframes) </a></li>
+		<li><a href="http://www.fanfueled.com/overview" target="_blank">FanFueled Overview</a></li>
+		<li><a href="http://www.fanfueled.com/ignite/" target="_blank">FanFueled ignite</a></li>
+		<li><a href="http://ca8u47.axshare.com/" target="_blank">FanFueled Header Redesign</a></li>
+		<li><a href="http://xf2cqo.axshare.com/" target="_blank">Michelob Ultra Foursome Desktop Wireframes</a></li>
+		<li><a href="http://j4ds43.axshare.com/" target="_blank">Michelob Ultra Foursome Mobile Wireframes</a></li>
+	</ul>
+	</div>
+	<footer class="contact">
+		<div class="card">
+			<div class="name">
+				<p>Sravan Kachavarapu</p>
+				<span>sravankacha [at] gmail.com</span>
+			</div>
+			<div class="socialmedia">
+				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="images/FACEBOOK.png" height="30" width="30"/></a>
+				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="images/TWITTER.png" height="30" width="30"></a>
+				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="images/GOOGLE+.png" height="30" width="30"/></a>
+				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="images/LINKEDIN.png" height="30" width="30"/></a>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/nyro.js"></script>
+	<script type="text/javascript" src="js/slides.js"></script>
+	<!--[if IE 6]>
+		<script type="text/javascript" src="js/nyro-ie6.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+			function setgo(){
+				document.getElementById('swffile').style.display='block'; 
+				document.getElementById('message').style.display='none'; 	
+			};
+			$(function() {
+			  $('.nyroModal').nyroModal();
+			  $('#slides,#slides2').slides();
+				checkNav();			
+				$('#contact').click(function(){
+					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
+				 });
+				 function checkNav(){
+					var wide =  $(document).outerWidth();
+					if(wide < 790){
+						$(".nav").removeClass("desktop").addClass("mobile");
+					}else{
+						$(".nav").removeClass("mobile").addClass("desktop");
+					}
+				}
+				$(window).resize(function () {
+			        checkNav();
+			    });
+			});
+		</script>
+	</body>
+</html>

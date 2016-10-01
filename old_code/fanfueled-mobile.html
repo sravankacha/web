@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<title>FanFueled Mobile</title>
+		<meta charset="utf-8" />
+		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="KEYWORDS" content="UI Design, Mobile, HTML, Javascript, CSS" />
+		<meta name="DESCRIPTION" content="UI ideas and implementations for FanFueled Mobile web apps" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />		
+		<link rel="stylesheet" href="css/nyroModal.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/nyro.js"></script>
+		<script type="text/javascript" src="js/slides.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="js/nyro-ie6.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+			function setgo(){
+				document.getElementById('swffile').style.display='block'; 
+				document.getElementById('message').style.display='none'; 	
+			};
+			$(function() {
+			  $('.nyroModal').nyroModal();
+			  $('#slides,#slides2').slides();
+				checkNav();			
+				$('#contact').click(function(){
+					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
+				 });
+				 function checkNav(){
+					var wide =  $(document).outerWidth();
+					if(wide < 790){
+						$(".nav").removeClass("desktop").addClass("mobile");
+					}else{
+						$(".nav").removeClass("mobile").addClass("desktop");
+					}
+				}
+				$(window).resize(function () {
+			        checkNav();
+			    });
+			});
+		</script>
+	</head>
+	<body>	
+	<div class="nav desktop">
+		<a href="#" class="logo" title="Sravan Kachavarapu">
+			<span>SK</span>
+			<h1>Sravan Kachavarapu</h1>
+		</a>
+		<a href="javascript:void(0)" class="nav-icon"></a>
+		<div class="nav-list">
+			<ul class="verMenu">
+				<li><a href="/" id="home" data-hover="Home">Home</a></li>
+				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
+				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
+				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<section class="project">
+		<div class="proj-banner">
+			<img src="" title="" alt=""/>
+		</div>
+		<div class="left">
+			<a href="/projects.html">&larr; Back to projects</a>
+			<div class="proj-features btcf">
+				<a href="#" class="code" data-title="Code snippets"></a>
+				<a href="#" class="screenshot" data-title="Project Screenshots"></a>
+			</div>
+			<div class="proj-tags btcf">
+				<span>Design</span>
+				<span>HTML/CSS</span>
+				<span>JavaScript</span>
+				<span>jQuery</span>
+			</div>
+		</div>
+		<div class="right">
+			<h2>FanFueled Mobile</h2>
+			<p>
+				FanFueled doesnt have native apps for mobile devices, so we had to implement a webapp that is mobile compatible. <br/>
+				FanFueled events and Engage are two apps under FanFueled apps that are integrated with seamless navigation. First step for the mobile solution was to create a navigation that easy to use on mobile and is seamless as on original webpages.
+			</p>
+			<h4>Mobile Navigation</h4>				
+			<p>
+				This is a javascript implementation to simulate mobile navigation similar to native mobile apps. 			</p>
+				<div style="overflow:auto">
+				<div class="proj-img">
+					<img src="images/mobile/events-mobile-nav.PNG"/>
+					<label>Events Mobile Nav</label>
+				</div>
+				<div class="proj-img">
+					<img src="images/mobile/engage-mobile-nav.PNG"/>
+					<label>Engage Mobile Nav</label>
+				</div>
+				<div class="proj-img">
+					<img src="images/mobile/diy-mobile-nav.PNG"/>
+					<label>Engage DIY(admin) Mobile Nav</label>
+				</div>
+				</div>
+			<h4>FanFueled Events Mobile</h4>
+			<p>
+				Events pages were not mobile friendly, As the mobile traffic increased for events pages, we needed to develop a mobile solution thats doesnt take toll on mobile data and also provides necessary information. So with above goals in mind we had to redo event pages to be mobile ready. First steps were to reduce information overload and provide necessary details along with easy to use ticket widget. This ticket widget helped users to choose tickets with ease and checkout easily. A new user friendly mobile checkout page was also created.</p>
+				<div style="overflow:auto">
+				<div class="proj-img">
+					<img src="images/mobile/events-mobile-list.jpg"/>
+					<label>Events List Page</label>
+				</div>
+				<div class="proj-img">
+					<img src="images/mobile/events-mobile-details.jpg"/>
+					<img src="images/mobile/events-mobile-details.png"/>
+					<label>Events Details Page</label>
+				</div>
+				<div class="proj-img">
+					<img src="images/mobile/events-mobile-checktop.PNG"/>
+					<img src="images/mobile/events-mobile-checkout.jpg"/>
+					<img src="images/mobile/events-mobile-paypal.PNG"/>
+					<label>Events Checkout</label>
+				</div>
+			</div>
+			<h4>FanFueled Engage Mobile</h4>
+			<p>
+				Engage is big and complex app that needs a proper mobile app for its proper use, which is in works. But we wanted to create an intermediate solution thats not complex but is easy to implement and solves the mobile problems.<br/>
+				A responsive web solution was implemented with CSS and JavaScript. Also the web page partials are created to  be served on demand.
+				<div class="proj-img">
+					<img src="images/mobile/engage-mobile-home.PNG"/>
+					<label>Engage Page</label>
+				</div>
+				<!-- <div class="proj-img">
+					<img src="images/mobile/About-Start-page.jpg"/>
+					<label>Engage Page</label>
+				</div> -->
+			</p>
+			<!-- <div class="code-snips">
+				<h4>Javascript Code Snippet</h4>
+				<pre>
+				</pre>
+			</div> -->
+		</div>
+	</section>
+	<div class="contact">
+		<div class="card">
+			<div class="name">
+				<p>Sravan Kachavarapu</p>
+				<span>sravankacha [at] gmail.com</span>
+			</div>
+			<div class="socialmedia">
+				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="images/FACEBOOK.png" height="30" width="30"/></a>
+				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="images/TWITTER.png" height="30" width="30"></a>
+				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="images/GOOGLE+.png" height="30" width="30"/></a>
+				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="images/LINKEDIN.png" height="30" width="30"/></a>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

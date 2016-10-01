@@ -1,0 +1,10 @@
+
+*.sass-cache
+*.sublime-*
+*.idea
+*.log
+.DS_Store
+.idea
+
+/dist/
+node_modules/
