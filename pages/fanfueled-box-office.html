@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<title>A kiosk web app from FanFueled</title>
+		<meta charset="utf-8" />
+		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="KEYWORDS" content="UX, UI, Design, Development, wireframes, prototype, Kiosk, touchscreen, Web app, e-commerce, point of sale, Front-end, HTML, CSS, javascript" />
+		<meta name="DESCRIPTION" content="A web app solution integrated with fanfueled ticketing system for point of sale KIOSK at event venues. I designed and developed the front-end for this box-office app" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		<link href="/resources/css/style.css" rel="stylesheet" type="text/css" />		
+		<link rel="stylesheet" href="/resources/css/nyroModal.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/nyro.js"></script>
+		<script type="text/javascript" src="js/slides.js"></script>
+		<!--[if IE 6]>
+			<script type="text/javascript" src="js/nyro-ie6.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+			function setgo(){
+				document.getElementById('swffile').style.display='block'; 
+				document.getElementById('message').style.display='none'; 	
+			};
+			$(function() {
+			  $('.nyroModal').nyroModal();
+			  $('#slides,#slides2').slides();
+				checkNav();			
+				$('#contact').click(function(){
+					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
+				 });
+				 function checkNav(){
+					var wide =  $(document).outerWidth();
+					if(wide < 790){
+						$(".nav").removeClass("desktop").addClass("mobile");
+					}else{
+						$(".nav").removeClass("mobile").addClass("desktop");
+					}
+				}
+				$(window).resize(function () {
+			        checkNav();
+			    });
+			});
+		</script>
+	</head>
+	<body>	
+	<div class="nav desktop">
+		<a href="#" class="logo" title="Sravan Kachavarapu">
+			<span>SK</span>
+			<h1>Sravan Kachavarapu</h1>
+		</a>
+		<a href="javascript:void(0)" class="nav-icon"></a>
+		<div class="nav-list">
+			<ul class="verMenu">
+				<li><a href="/" id="home" data-hover="Home">Home</a></li>
+				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
+				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
+				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<section class="project">
+		<div class="proj-banner">
+			<img src="" title="" alt=""/>
+		</div>
+		<div class="left">
+			<a href="/projects.html">&larr; Back to projects</a>
+			<div class="proj-features btcf">
+				<a href="#" class="code" data-title="Code snippets"></a>
+				<a href="#" class="screenshot" data-title="Project Screenshots"></a>
+			</div>
+			<div class="proj-tags btcf">
+				<span>Design</span>
+				<span>Wireframes</span>
+				<span>Prototype</span>
+				<span>UI</span>
+				<span>HTML/CSS</span>
+				<span>JavaScript</span>
+				<span>jQuery</span>
+			</div>
+		</div>
+		<div class="right">
+			<h2>FanFueled Box Office</h2>
+			<p>
+			Box office as you guessed already is an app for touch screens at event venues to sell tickets. Fan fueled hosts events and users can purchase tickets through web app. But some clients needed a service to sell tickets at the venue door.
+			</p><p>
+			With the need for such an application we created an web based touchscreen that can be accesses at a kiosk installed at the venue.
+			</p><p>
+			This app let's venue managers sell tickets at the door just by swiping a credit card. The app is developed to manage multiple personnel at kiosk and ability to purchase with cash as well. The receives are sent to customers email address and hard tickets are printed at the kiosk.
+			</p>
+<!-- 			<div class="code-snips">
+				<h4>Javascript Code Snippet</h4>
+				<pre>
+				</pre>
+			</div> -->
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office.png" alt="Box-Office" />
+			<label>Home Screen (Events List)<label>
+			</div>
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office_ADD_ITEM_SELECT.png" alt="Box-Office_ADD_ITEM_SELECT" />
+			<label>List Of Tickets<label>
+			</div>
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office_CART_EMPTY.png" alt="Box-Office_CART_EMPTY" />
+			<label>Empty Cart<label>
+			</div>
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office_tickets.png" alt="Box-Office_tickets" />
+			<label>Tickets <label>
+			</div>
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office_checkout.png" alt="Box-Office_checkout" />
+			<label>Checkout Screen<label>
+			</div>
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office_confirmation.png" alt="Box-Office_confirmation" />
+			<label>Oreder Confirmation Screen<label>
+			</div>
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office_discount_1.png" alt="Box-Office_discount_1" />
+			<label>Discount Entry<label>
+			</div>
+			<div class="proj-img">
+			<img src="/resources/images/Box-Office/Box-Office_discount_2.png" alt="Box-Office_discount_2" />
+			<label>Advanced Discount Options<label>
+			</div>
+		</div>
+	</section>
+	<div class="contact">
+		<div class="card">
+			<div class="name">
+				<p>Sravan Kachavarapu</p>
+				<span>sravankacha [at] gmail.com</span>
+			</div>
+			<div class="socialmedia">
+				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="/resources/images/FACEBOOK.png" height="30" width="30"/></a>
+				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="/resources/images/TWITTER.png" height="30" width="30"></a>
+				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="/resources/images/GOOGLE+.png" height="30" width="30"/></a>
+				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="/resources/images/LINKEDIN.png" height="30" width="30"/></a>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
