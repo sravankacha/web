@@ -1,47 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Contact</title>
+		<title>My Resume</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="KEYWORDS" content="Sravan Kachavarapu, User Experience Architect, UI Designer, HTML, CSS, JavaScript, portfolio,UX, UI Resume, About, Contact, Work, Projects, Social media, email" />
-		<meta name="DESCRIPTION" content="Contact me for solving your UI /UX problems." />
+		<meta name="KEYWORDS" content="Sravan Kachavarapu, User Experience Architect, UI Designer, HTML, CSS, JavaScript, portfolio,UX, UI, HCI, IA,Information Architecture, user experience, Resume, About, Contact, Work, Projects" />
+		<meta name="DESCRIPTION" content="This is my Resume, CV" />
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 		<link href="/resources/css/style.css" rel="stylesheet" type="text/css" />		
 		<link rel="stylesheet" href="/resources/css/nyroModal.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			
-			$("document").ready(function() {
-				checkNav();			
-				 $('#contact').click(function(){
-					$('.contact').animate({
-						'left':'-100%'
-					}, 1000);				   
-				 });
-				 function checkNav(){
-					var wide =  $(document).outerWidth();
-					if(wide < 790){
-						$(".nav").removeClass("desktop").addClass("mobile");
-					}else{
-						$(".nav").removeClass("mobile").addClass("desktop");
-					}
-				}
-				$(window).resize(function () {
-			        checkNav();
-			    });
-			    // Remove parallax scroll for screen widths less than 720px
-			    $(window).bind('scroll', function (e) {
-			        var scrollX = $('body').scrollTop();
-			        if (scrollX < 600) {
-			            $("body").css('background-position', (scrollX * 0.5) +' -200px');
-			        }
-			    });
-			});
-		</script>
 	</head>
-	<body style="background:#3e454f">
+	<body style="background:#f3f3f5">
 	<div class="nav desktop">
 		<a href="#" class="logo" title="Sravan Kachavarapu">
 			<span>SK</span>
@@ -56,9 +26,18 @@
 				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
 			</ul>
 		</div>
-	</div>	
-	<footer class="contact" style="margin:auto; position:absolute; top:0; bottom:0; left:auto; right:auto;">
-		<div class="card" style="position:absolute; top:50%; left:50%;margin-left:-250px; margin-top:-100px">
+	</div>
+	
+	<div class="resume btcf" >	
+		<div class="wrap">
+			<div class="title">
+				Resume
+			</div>
+			<a href="/resume/sravan_resume.pdf" title="View Resume" style="margin-left:10%;padding:10px;display:inline-block;margin-top:40px;">PDF version of my resume &raquo;</a>
+		</div>
+	</div>		
+	<footer class="contact">
+		<div class="card">
 			<div class="name">
 				<p>Sravan Kachavarapu</p>
 				<span>sravankacha [at] gmail.com</span>
@@ -71,5 +50,36 @@
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/resources/js/nyro.js"></script>
+	<script type="text/javascript" src="/resources/js/slides.js"></script>
+	<!--[if IE 6]>
+		<script type="text/javascript" src="/resources/js/nyro-ie6.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+			function setgo(){
+				document.getElementById('swffile').style.display='block'; 
+				document.getElementById('message').style.display='none'; 	
+			};
+			$(function() {
+			  $('.nyroModal').nyroModal();
+			  $('#slides,#slides2').slides();
+				checkNav();			
+				$('#contact').click(function(){
+					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
+				 });
+				 function checkNav(){
+					var wide =  $(document).outerWidth();
+					if(wide < 790){
+						$(".nav").removeClass("desktop").addClass("mobile");
+					}else{
+						$(".nav").removeClass("mobile").addClass("desktop");
+					}
+				}
+				$(window).resize(function () {
+			        checkNav();
+			    });
+			});
+		</script>
 	</body>
 </html>

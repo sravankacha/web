@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel serve ./src/**/*.html",
+    "build": "parcel build ./src/**/*.html"
+  },
+  "targets": {
+    "app": {
+      "distDir": "./dist"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sravankacha/web.git"
+  },
+  "author": "Sravan Kachavarapu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sravankacha/web/issues"
+  },
+  "homepage": "https://github.com/sravankacha/web#readme",
+  "devDependencies": {
+    "parcel": "2.0.0-beta.1"
+  },
+  "dependencies": {}
+}

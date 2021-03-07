@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page | Sravan Kachavarapu</title>
-  <link rel="stylesheet" href="/resources/styles/style.css">
+  <link rel="stylesheet" href="/resources/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap" rel="stylesheet">
   <style>
@@ -88,12 +88,18 @@
     #projectGrid{
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(8, 5vw);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 2;
       grid-gap: 1rem;
+      grid-auto-flow: row;
     }
     #projectGrid .project-tile{
       background: conic-gradient(at top right, var(--clr-4),var(--clr-5));
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      padding: 0;
+      margin: 0;
+      line-height: 0;
     }
 
   </style>
@@ -312,15 +318,15 @@
       </section>
       <section id="projects">
         <h2 id="exp" class="mb2">Projects</h2>
-        <p>Some past projects curated</p>
+        <p class="mb2">Some past projects curated</p>
         <article>
           <ul id="projectGrid">
-            <li class="project-tile"><img src="/resources/images/fanfueled-engage-diy-logo.jpg" alt="FanFueled Engage DIY" title="FanFueled Engage DIY"/></li>
-            <li class="project-tile"><img src="/resources/images/platinum.jpg" alt="Platinum Nights Scavenger Hunt" title="Platinum Nights Scavenger Hunt"/></li>
-            <li class="project-tile"><img src="/resources/images/ff-tickets/ff-tickets-template.jpg" alt="FanFueled Tickets" title="FanFueled Tickets Redesign"/></li>
-            <li class="project-tile"><img src="/resources/images/foodi_logo.jpg" alt="Foodi App" title="Foodi App"/></li>
-            <li class="project-tile"><img src="/resources/images/ff-mobile/ff-mobile-logo.jpg" alt="FanFueled Mobile" title="FanFueled Mobile"/></li>
-            <li class="project-tile"><img src="/resources/images/cowsandbulls_thumb.jpg" alt="Cows and Bulls Game" title="Cows and Bulls Game"/></li>
+            <li class="project-tile"><a href="/pages/fanfueled-engage-diy.html"><img width="300" height="300" src="/resources/images/fanfueled-engage-diy-logo.jpg" alt="FanFueled Engage DIY" title="FanFueled Engage DIY"/></a></li>
+            <li class="project-tile"><a href="/pages/platinumnights.html"><img width="300" height="300" src="/resources/images/platinum.jpg" alt="Platinum Nights Scavenger Hunt" title="Platinum Nights Scavenger Hunt"/></a></li>
+            <li class="project-tile"><a href="/pages/fanfueled-tickets.html"><img width="300" height="300" src="/resources/images/ff-tickets/ff-tickets-template.jpg" alt="FanFueled Tickets" title="FanFueled Tickets Redesign"/></a></li>
+            <li class="project-tile"><a href="/pages/fanfueled-mobile.html"><img width="300" height="300" src="/resources/images/ff-mobile/ff-mobile-logo.jpg" alt="FanFueled Mobile" title="FanFueled Mobile"/></a></li>
+            <li class="project-tile"><a href="/pages/fanfueled-engage.html"><img width="300" height="300" src="/resources/images/engage/engage-logo.png" alt="Fanfueled Engage" title="FanFueled Engage"/></a></li>
+            <li class="project-tile"><a href="/pages/fanfueled-home-page.html"><img width="300" height="300" src="/resources/images/ff-home/ff-homepage-icon.jpg" alt="Cows and Bulls Game" title="Cows and Bulls Game"/></a></li>
           </ul>
         </article>
       </section>

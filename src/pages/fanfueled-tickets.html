@@ -1,20 +1,20 @@
 <html>
 	<head>
-		<title>A Home page for FanFueled</title>
+		<title>FanFueled Tickets</title>
 		<meta charset="utf-8" />
-		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+		<link rel='shortcut icon' type='image/x-icon' href='/resources/images/favicon.ico' />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="KEYWORDS" content="Cool, Parallax, responsive design, mobile friendly, Branding, Front-end" />
-		<meta name="DESCRIPTION" content="I developed the parallax homepage for FanFueled brand, This page is responsive, mobile friendly, has cool engaging parllax effects." />
+		<meta name="KEYWORDS" content="UI Design, Code, UX solution, HTML, CSS, Media queries" />
+		<meta name="DESCRIPTION" content="A UI solution for simpler and user friendly event tickets" />
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 		<link href="/resources/css/style.css" rel="stylesheet" type="text/css" />		
 		<link rel="stylesheet" href="/resources/css/nyroModal.css" type="text/css" media="screen" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/nyro.js"></script>
-		<script type="text/javascript" src="js/slides.js"></script>
+		<script type="text/javascript" src="/resources/js/nyro.js"></script>
+		<script type="text/javascript" src="/resources/js/slides.js"></script>
 		<!--[if IE 6]>
-			<script type="text/javascript" src="js/nyro-ie6.js"></script>
+			<script type="text/javascript" src="/resources/js/nyro-ie6.js"></script>
 		<![endif]-->
 		<script type="text/javascript">
 			function setgo(){
@@ -44,7 +44,7 @@
 	</head>
 	<body>	
 	<div class="nav desktop">
-		<a href="#" class="logo" title="Sravan Kachavarapu">
+		<a href="/" class="logo" title="Sravan Kachavarapu">
 			<span>SK</span>
 			<h1>Sravan Kachavarapu</h1>
 		</a>
@@ -75,29 +75,37 @@
 			</div>
 		</div>
 		<div class="right">
-			<h2>FanFueled Home Page</h2>
+			<h2>FanFueled Tickets</h2>
 			<p>
-				Home Page was designed to be responsive, Has cool parallax effects and animations.
+				FanFueled is a DIY event hosting and ticket selling platform. Event host can create an event and sell multiple types of tickets. A user can purchase a ticket for an event. This ticket is sent to user email address as a PDF file. This method had the following drawbacks:
+				<ul>
+					<li>Information was not well organized</li>
+					<li>PDF creation was process intensive</li>
+					<li>PDF size is big for Mobiles</li>
+					<li>Access to tickets was not easy</li>
+					<li>Printing of tickets right after the purhcase was not possible.</li>
+				</ul>
 			</p>
-			<a class="highlight prototype blue" href="/homepage.html" target="_blank">Home Page Live Preview</a>
-			<h4>Home page (desktop)</h4>
-			<div class="proj-img">
-				<img src="/resources/images/ff-home/ff-home-desk.jpg"/>
-				<label>Home Page</label>
-			</div>
-			<!-- <h4>Home page (Mobile)</h4>
-			<div class="proj-img">
-				<img src="/resources/images/ff-home/ff-home-desk.jpg"/>
-				<label>Mobile Home Page</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/ff-home/ff-home-anim.gif"/>
-				<label>Parallax Home Page</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/ff-home/ff-home-resp.gif"/>
-				<label>Responsive Home Page</label>
+			<p>
+				To solve the above issues, Redesign was needed. The new solution is a html based ticket which solves the above issues. Information is well organized with redesign, HTML ticket creation is easy and faster. HTML solution is responsive and is mobile friendly. Access to tickets is easier and is available for print right away.
+			</p>
+<!-- 			<div class="code-snips">
+				<h4>Javascript Code Snippet</h4>
+				<pre>
+				</pre>
 			</div> -->
+			<div class="proj-img">
+				<img src="/resources/images/ff-tickets/ticket-reg.png"/>
+				<label>New Ticket Design</label>
+			</div>
+			<div class="proj-img">
+				<img src="/resources/images/ff-tickets/ticket-mob.png"/>
+				<label>Responsive Mobile Ticket</label>
+			</div>
+			<div class="proj-img">
+				<img src="/resources/images/ff-tickets/email-conf.png"/>
+				<label>Email Confirmation</label>
+			</div>
 		</div>
 	</section>
 	<div class="contact">
