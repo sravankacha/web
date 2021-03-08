@@ -4,13 +4,9 @@
   "description": "personal website",
   "main": "index.html",
   "scripts": {
-    "start": "parcel serve ./src/**/index.html",
-    "build": "parcel build ./src/index.html"
-  },
-  "targets": {
-    "app": {
-      "distDir": "./dist"
-    }
+    "start": "npm run build && npm run serve",
+    "build": "node ./tools/build.js",
+    "serve": "npx http-server ./dist -p 1234"
   },
   "optimize": true,
   "repository": {
@@ -24,7 +20,8 @@
   },
   "homepage": "https://github.com/sravankacha/web#readme",
   "devDependencies": {
-    "parcel": "2.0.0-beta.1"
+    "http-server": "0.12.3",
+    "minify": "7.0.1"
   },
   "dependencies": {}
 }
