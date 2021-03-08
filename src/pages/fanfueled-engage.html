@@ -1,148 +1,87 @@
 <html>
-	<head>
-		<title>FanFueled Engage</title>
-		<meta charset="utf-8" />
-		<link rel='shortcut icon' type='image/x-icon' href='/resources/images/favicon.ico' />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="KEYWORDS" content="Udeation, Conceptualization, Wireframes, Prototypes, Mobile First" />
-		<meta name="DESCRIPTION" content="Creation of Engage platform for FanFueled" />
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-		<link href="/resources/css/style.css" rel="stylesheet" type="text/css" />		
-		<link rel="stylesheet" href="/resources/css/nyroModal.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="/resources/js/nyro.js"></script>
-		<script type="text/javascript" src="/resources/js/slides.js"></script>
-		<!--[if IE 6]>
-			<script type="text/javascript" src="/resources/js/nyro-ie6.js"></script>
-		<![endif]-->
-		<script type="text/javascript">
-			function setgo(){
-				document.getElementById('swffile').style.display='block'; 
-				document.getElementById('message').style.display='none'; 	
-			};
-			$(function() {
-			  $('.nyroModal').nyroModal();
-			  $('#slides,#slides2').slides();
-				checkNav();			
-				$('#contact').click(function(){
-					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
-				 });
-				 function checkNav(){
-					var wide =  $(document).outerWidth();
-					if(wide < 790){
-						$(".nav").removeClass("desktop").addClass("mobile");
-					}else{
-						$(".nav").removeClass("mobile").addClass("desktop");
-					}
-				}
-				$(window).resize(function () {
-			        checkNav();
-			    });
-			});
-		</script>
-	</head>
-	<body>	
-	<div class="nav desktop">
-		<a href="#" class="logo" title="Sravan Kachavarapu">
-			<span>SK</span>
-			<h1>Sravan Kachavarapu</h1>
-		</a>
-		<a href="javascript:void(0)" class="nav-icon"></a>
-		<div class="nav-list">
-			<ul class="verMenu">
-				<li><a href="/" id="home" data-hover="Home">Home</a></li>
-				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
-				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
-				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-	<section class="project">
-		<div class="proj-banner">
-			<img src="" title="" alt=""/>
-		</div>
-		<div class="left">
-			<a href="/projects.html">&larr; Back to projects</a>
-			<div class="proj-features btcf">
-				<a href="#" class="code" data-title="Code snippets"></a>
-				<a href="#" class="screenshot" data-title="Project Screenshots"></a>
-			</div>
-			<div class="proj-tags btcf">
-				<span>HTML/CSS</span>
-				<span>JavaScript</span>
-				<span>jQuery</span>
-			</div>
-		</div>
-		<div class="right">
-			<h2>FanFueled Engage</h2>
-			<p>
-				FanFueled is an engagement marketing company that builds social gaming solutions for brands, artists and festivals. We use patented software to track the ripple of influence, incentivizing peer to peer marketing.
-			</p><p>
-				Engage is a social gaming platform where users can engage in their daily social interactions with brands, artists and festivals. Users earn points for completing the social actions, so by accumulating a certain number of points users will be able to redeem them for prizes or rewards or offers from the brand or artist or festivals.
-			</p><p>
-				Fan fueled engage is built ground up with mobile in mind. Each engage platform should be able to accommodate all the social interactions such as Facebook likes, tweets and checkin's. Other actions such as watching YouTube videos, listening to songs, completing custom quiz, purchases and many other can be added to an engage platform.
-			</p><p>
-				Each platform can have up to 40 actions on average and 20 varieties or rewards. Some engage platforms can pull up to 30,000 users. There is a leaderboard for each engage displayed up to 12 places to show the competition for the prizes.
-			</p><p>
-<!-- 			<div class="code-snips">
-				<h4>Javascript Code Snippet</h4>
-				<pre>
-				</pre>
-			</div> -->
-			<h4>Wireframes/ Concepts</h4>
-			<div class="proj-img">
-				<img src="/resources/images/engage/engage_all.png"/>
-				<label>Engage Wireframes / Conception</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/desk-engage.png">
-				<label>Engage wireframes</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/tablet-engage.png"/>
-				<label>Tablet Wireframes</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/tablet-detail.png"/>
-				<label>Tablet Details</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/mobile-engage.png"/>
-				<label>Mobile Wireframes</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/desk-profile.png"/>
-				<label>Profile</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/profile.png"/>
-				<label></label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/tablet-profile.png"/>
-				<label>Profile on Tablet</label>
-			</div>
-			<div class="proj-img">
-				<img src="/resources/images/engage/profile_design_2.png"/>
-				<label>Profile Alternate</label>
-			</div>
-			
-		</div>
-	</section>
-	<div class="contact">
-		<div class="card">
-			<div class="name">
-				<p>Sravan Kachavarapu</p>
-				<span>sravankacha [at] gmail.com</span>
-			</div>
-			<div class="socialmedia">
-				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="/resources/images/FACEBOOK.png" height="30" width="30"/></a>
-				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="/resources/images/TWITTER.png" height="30" width="30"></a>
-				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="/resources/images/GOOGLE+.png" height="30" width="30"/></a>
-				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="/resources/images/LINKEDIN.png" height="30" width="30"/></a>
-			</div>
-		</div>
-	</div>
-	</body>
+  <head>
+    <title>FanFueled Engage</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="KEYWORDS" content="Udeation, Conceptualization, Wireframes, Prototypes, Mobile First" />
+    <meta name="DESCRIPTION" content="Creation of Engage platform for FanFueled" />
+
+    <link href="/resources/css/style_2.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <section class="project">
+      <div class="left">
+        <a href="/">&larr; Back to projects</a>
+        <div class="proj-features btcf">
+          <a href="#" class="code" data-title="Code snippets"></a>
+          <a href="#" class="screenshot" data-title="Project Screenshots"></a>
+        </div>
+        <div class="proj-tags btcf">
+          <span>HTML/CSS</span>
+          <span>JavaScript</span>
+          <span>jQuery</span>
+        </div>
+      </div>
+      <div class="right">
+        <h2>FanFueled Engage</h2>
+        <p>
+          FanFueled is an engagement marketing company that builds social gaming solutions for brands, artists and
+          festivals. We use patented software to track the ripple of influence, incentivizing peer to peer marketing.
+        </p>
+        <p>
+          Engage is a social gaming platform where users can engage in their daily social interactions with brands,
+          artists and festivals. Users earn points for completing the social actions, so by accumulating a certain
+          number of points users will be able to redeem them for prizes or rewards or offers from the brand or artist or
+          festivals.
+        </p>
+        <p>
+          Fan fueled engage is built ground up with mobile in mind. Each engage platform should be able to accommodate
+          all the social interactions such as Facebook likes, tweets and checkin's. Other actions such as watching
+          YouTube videos, listening to songs, completing custom quiz, purchases and many other can be added to an engage
+          platform.
+        </p>
+        <p>
+          Each platform can have up to 40 actions on average and 20 varieties or rewards. Some engage platforms can pull
+          up to 30,000 users. There is a leaderboard for each engage displayed up to 12 places to show the competition
+          for the prizes.
+        </p>
+        <p></p>
+
+        <h4>Wireframes/ Concepts</h4>
+        <div class="proj-img">
+          <img src="/resources/images/engage/engage_all.png" />
+          <label>Engage Wireframes / Conception</label>
+        </div>
+        <div class="proj-img">
+          <img src="/resources/images/engage/desk-engage.png" />
+          <label>Engage wireframes</label>
+        </div>
+        <div class="proj-img">
+          <img src="/resources/images/engage/tablet-engage.png" />
+          <label>Tablet Wireframes</label>
+        </div>
+        <div class="proj-img">
+          <img src="/resources/images/engage/tablet-detail.png" />
+          <label>Tablet Details</label>
+        </div>
+        <div class="proj-img">
+          <img src="/resources/images/engage/mobile-engage.png" />
+          <label>Mobile Wireframes</label>
+        </div>
+        <div class="proj-img">
+          <img src="/resources/images/engage/desk-profile.png" />
+          <label>Profile</label>
+        </div>
+        <div class="proj-img">
+          <img src="/resources/images/engage/tablet-profile.png" />
+          <label>Profile on Tablet</label>
+        </div>
+        <div class="proj-img">
+          <img src="/resources/images/engage/profile_design_2.png" />
+          <label>Profile Alternate</label>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

@@ -6,64 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="KEYWORDS" content="UI design, UI solutions, Front-end, developemnt, UX" />
 		<meta name="DESCRIPTION" content="UI and front-end development for FanFueled events wizard, which is a diy events creation platform." />
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-		<link href="/resources/css/style.css" rel="stylesheet" type="text/css" />		
-		<link rel="stylesheet" href="/resources/css/nyroModal.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="/resources/js/nyro.js"></script>
-		<script type="text/javascript" src="/resources/js/slides.js"></script>
-		<!--[if IE 6]>
-			<script type="text/javascript" src="/resources/js/nyro-ie6.js"></script>
-		<![endif]-->
-		<script type="text/javascript">
-			function setgo(){
-				document.getElementById('swffile').style.display='block'; 
-				document.getElementById('message').style.display='none'; 	
-			};
-			$(function() {
-			  $('.nyroModal').nyroModal();
-			  $('#slides,#slides2').slides();
-				checkNav();			
-				$('#contact').click(function(){
-					$('html, body').animate({ scrollTop: $(".contact").offset().top }, 1000);
-				 });
-				 function checkNav(){
-					var wide =  $(document).outerWidth();
-					if(wide < 790){
-						$(".nav").removeClass("desktop").addClass("mobile");
-					}else{
-						$(".nav").removeClass("mobile").addClass("desktop");
-					}
-				}
-				$(window).resize(function () {
-			        checkNav();
-			    });
-			});
-		</script>
+		
+		<link href="/resources/css/style_2.css" rel="stylesheet" type="text/css" />
+		
+
 	</head>
 	<body>	
-	<div class="nav desktop">
-		<a href="#" class="logo" title="Sravan Kachavarapu">
-			<span>SK</span>
-			<h1>Sravan Kachavarapu</h1>
-		</a>
-		<a href="javascript:void(0)" class="nav-icon"></a>
-		<div class="nav-list">
-			<ul class="verMenu">
-				<li><a href="/" id="home" data-hover="Home">Home</a></li>
-				<li><a href="resume/sravan_resume.pdf" id="resume" data-hover="Resume" target="_blank">Resume</a></li>
-				<li><a href="/projects.html" id="work" data-hover="Projects">Projects</a></li>
-				<li><a href="javascript:void(0)" id="contact" data-hover="Contact">Contact</a></li>
-			</ul>
-		</div>
-	</div>
+
 	<section class="project">
-		<div class="proj-banner">
-			<img src="" title="" alt=""/>
-		</div>
+		
 		<div class="left">
-			<a href="/projects.html">&larr; Back to projects</a>
+			<a href="/">&larr; Back to projects</a>
 			<div class="proj-features btcf">
 				<a href="#" class="code" data-title="Code snippets"></a>
 				<a href="#" class="screenshot" data-title="Project Screenshots"></a>
@@ -128,19 +81,6 @@
 			</div>
 		</div>
 	</section>
-	<div class="contact">
-		<div class="card">
-			<div class="name">
-				<p>Sravan Kachavarapu</p>
-				<span>sravankacha [at] gmail.com</span>
-			</div>
-			<div class="socialmedia">
-				<a class="facebook" href="http://www.facebook.com/sravankacha" target="_blank"><img src="/resources/images/FACEBOOK.png" height="30" width="30"/></a>
-				<a class="twitter" href="http://www.twitter.com/sravankacha" target="_blank"><img src="/resources/images/TWITTER.png" height="30" width="30"></a>
-				<a class="google" href="http://www.gplus./sravankacha" target="_blank"><img src="/resources/images/GOOGLE+.png" height="30" width="30"/></a>
-				<a class="linkedin" href="http://www.linkedin.com/in/sravankumarkachavarapu" target="_blank"><img src="/resources/images/LINKEDIN.png" height="30" width="30"/></a>
-			</div>
-		</div>
-	</div>
+	
 	</body>
 </html>
