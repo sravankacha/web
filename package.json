@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npm run build && npm run serve",
-    "build": "node ./tools/build.js",
+    "build": "npx gulp build",
     "serve": "npx http-server ./dist -p 1234"
   },
   "optimize": true,
@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/sravankacha/web#readme",
   "devDependencies": {
-    "http-server": "0.12.3",
-    "minify": "7.0.1"
+    "delete": "1.1.0",
+    "gulp": "4.0.2",
+    "gulp-imagemin": "7.1.0",
+    "gulp-minifier": "3.5.0",
+    "http-server": "0.12.3"
   },
   "dependencies": {}
 }
