@@ -9,169 +9,6 @@
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --clr-1: #1d2d50;
-      --clr-2: white;
-      --clr-3: #6930c3;
-      --clr-4: #1e5f74;
-      --clr-5: #64dfdf;
-    }
-    
-    #home{
-      width: 100vw;
-      height: 100vh;
-      display: grid;
-      grid-template-columns: 4fr 6fr;
-      grid-template-rows: auto;
-      place-items: stretch;
-      place-content: stretch;
-    }
-    #intro{
-      background: var(--clr-5);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 8rem;
-      height: 100vh;
-      min-height: 32rem;
-    } 
-    #hello{
-      font-size: 8rem;
-      color: var(--clr-1);
-      font-weight: 700;
-    }
-    .subtext{
-      font-size: 1.5rem;
-      color: var(--clr-4);
-      display: inline;
-      margin: 0;
-    }
-    #contact{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      list-style: none;
-    }
-    body a{
-      color: var(--clr-3);
-    }
-    #experienceProjects{
-      padding: 5rem;
-      height: 100vh;
-      overflow: auto;
-    }
-    h1{
-      display: inline;
-    }
-    /* @media (prefers-color-scheme: dark) {
-      body{
-        background: var(--clr-1, black);
-      }
-      #experience{
-        color: white;
-      }
-    } */
-
-    @media print {
-      #home{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-      }
-      #experience{
-        height: auto;
-      }
-      #experienceProjects{
-        height: auto;
-      }
-    }
-    #projects{
-      padding-top: 5rem;
-      border-top: 1px solid var(--clr-1);
-    }
-    #projectGrid{
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      grid-gap: 1rem;
-      grid-auto-flow: row;
-    }
-    #projectGrid .project-tile{
-      background: conic-gradient(at top right, var(--clr-4),var(--clr-5));
-      aspect-ratio: 1/1;
-      padding: 0;
-      margin: 0;
-      line-height: 0;
-      display: block;
-      box-shadow: none;
-      transition:all .2s linear;
-      position: relative;
-    }
-
-    #projectGrid .project-tile a{
-      display: block;
-      line-height: inherit;
-    }
-    #projectGrid .project-tile:hover{
-      /* box-shadow: 0 2px 6px rgba(0,0,0, 0.5); */
-    }
-    #projectGrid .project-tile:active{
-      box-shadow: none;
-    }
-    #projectGrid .project-tile a img{
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-    #projectGrid .project-tile:before, #projectGrid .project-tile:after{
-      position: absolute;
-      content: "";
-      background: var(--clr-5);
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      opacity: .5;
-      transition: opacity ease-in-out .3s, transform ease-in-out .3s;
-    }
-    #projectGrid .project-tile:after{
-      background: var(--clr-3);
-    }
-    #projectGrid .project-tile:hover:before{
-      transform: rotate(-.75deg) scale(1.025) skew(.05rad);
-    }
-    #projectGrid .project-tile:hover:after{
-      transform: rotate(1.75deg) scale(1.025) skew(.05rad);
-    }
-    @media (prefers-reduced-motion) {
-      #projectGrid .project-tile:before, #projectGrid .project-tile:after{
-        transition: none;
-      }
-    }
-    /* #separatorCurve{
-      position: absolute;
-      transform: rotate(90deg);
-      transform-origin: 0 0;
-      width: 100vh;
-      top: 0;
-      left: calc(40vw + 100vh/4.5);
-    } */
-
-    @media (max-width:1024px){
-      #home{
-        grid-template-columns: 1fr;
-      }
-      .subtext{
-        display: inline-block;
-      }
-      #home, #experienceProjects{
-        height: auto;
-      }
-    }
-
-  </style>
 </head>
 <body>
   <main id="home" class="">
@@ -187,6 +24,10 @@
         <li class="mr2 pt2 pb2"><a href="mailto:sravankacha@gmail.com" target="_blank" rel="noopener">Sravankacha[at]gmail.com</a></li>
       </ul>
       <p><span>&#9737;</span> Washington, DC</p>
+      <span id="blob"></span>
+      <!-- <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="shape-overlays__path"></path>
+      </svg> -->
     </section>
     <section id="experienceProjects">
       <section id="experience">
@@ -401,8 +242,6 @@
       </section>
     </section>
   </main>
-  <!-- <svg id="separatorCurve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="var(--clr-5)" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-  </svg> -->
+  <!-- <script type="text/javascript" src="./resources/js/separator_anime.js"></script> -->
 </body>
 </html>

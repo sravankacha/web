@@ -1,5 +1,5 @@
 const del = require('delete');
-const { series, src, dest } = require('gulp');
+const { series, src, dest, watch } = require('gulp');
 var minify = require('gulp-minifier');
 const imagemin = require('gulp-imagemin');
 const srcFolderPath = 'src';
@@ -11,7 +11,7 @@ function clean(cb) {
 }
 
 function build(cb) {
-  src(`${srcFolderPath}/**/*`)
+  src([`${srcFolderPath}/**/*.html`, `${srcFolderPath}/**/*.css`, `${srcFolderPath}/**/*.js`])
     .pipe(
       minify({
         minify: true,
@@ -27,10 +27,16 @@ function build(cb) {
         minifyCSS: true
       })
     )
-    .pipe(imagemin())
     .pipe(dest(destFolderPath));
   cb();
 }
 
+function buildImg(cb) {
+  src(`${srcFolderPath}/**/*`).pipe(imagemin()).pipe(dest(destFolderPath));
+  cb();
+}
+
+// watch(`${srcFolderPath}/**/*`, build);
+
 exports.build = build;
-exports.default = series(clean, build);
+exports.default = series(clean, build, buildImg);

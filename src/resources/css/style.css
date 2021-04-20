@@ -315,3 +315,223 @@ p, li, a{
 .pb8 {
   padding-bottom: 1024px
 }
+:root {
+  --clr-1: #1d2d50;
+  --clr-2: white;
+  --clr-3: #6930c3;
+  --clr-4: #1e5f74;
+  --clr-5: #64dfdf;
+}
+
+#home{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  grid-template-rows: auto;
+  place-items: stretch;
+  place-content: stretch;
+}
+#intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8rem;
+  height: 100vh;
+  min-height: 32rem;
+  position: relative;
+} 
+#intro #blob{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-5);
+  border-radius: 30% 40% 50% 80%;
+  transform: skew(-10deg);
+  z-index: -1;
+  left: -2rem;
+  animation: blob 9s infinite;
+  transition: border-radius linear 1200ms, transform linear 1200ms;
+}
+@keyframes blob{
+  0%{
+    border-radius: 30% 40% 50% 80%;
+    transform: skew(10deg);
+  }
+  10%{
+    border-radius: 40% 50% 60% 90%;
+    transform: skew(5deg);
+  }
+  20%{
+    border-radius: 50% 60% 70% 80%;
+    transform: skew(0deg);
+  }
+  30%{
+    border-radius: 60% 70% 60% 70%;
+    transform: skew(-5deg);
+  }
+  40%{
+    border-radius: 70% 80% 50% 60%;
+    transform: skew(-10deg);
+  }
+  50%{
+    border-radius: 80% 90% 40% 50%;
+    transform: skew(-15deg);
+  }
+  60%{
+    border-radius: 70% 80% 30% 40%;
+    transform: skew(-10deg);
+  }
+  70%{
+    border-radius: 60% 70% 20% 50%;
+    transform: skew(-5deg);
+  }
+  80%{
+    border-radius: 50% 60% 30% 60%;
+    transform: skew(0deg);
+  }
+  90%{
+    border-radius: 40% 50% 40% 70%;
+    transform: skew(5deg);
+  }
+  100%{
+    border-radius: 30% 40% 50% 80%;
+    transform: skew(10deg);
+  }
+}
+#hello{
+  font-size: 8rem;
+  color: var(--clr-1);
+  font-weight: 700;
+}
+.subtext{
+  font-size: 1.5rem;
+  color: var(--clr-4);
+  display: inline;
+  margin: 0;
+}
+#contact{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+body a{
+  color: var(--clr-3);
+}
+#experienceProjects{
+  padding: 5rem;
+  height: 100vh;
+  overflow: auto;
+}
+h1{
+  display: inline;
+}
+/* @media (prefers-color-scheme: dark) {
+  body{
+    background: var(--clr-1, black);
+  }
+  #experience{
+    color: white;
+  }
+} */
+
+@media print {
+  #home{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  #experience{
+    height: auto;
+  }
+  #experienceProjects{
+    height: auto;
+  }
+}
+#projects{
+  padding-top: 5rem;
+  border-top: 1px solid var(--clr-1);
+}
+#projectGrid{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 1rem;
+  grid-auto-flow: row;
+}
+#projectGrid .project-tile{
+  background: conic-gradient(at top right, var(--clr-4),var(--clr-5));
+  aspect-ratio: 1/1;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  display: block;
+  box-shadow: none;
+  transition:all .2s linear;
+  position: relative;
+}
+
+#projectGrid .project-tile a{
+  display: block;
+  line-height: inherit;
+}
+#projectGrid .project-tile:hover{
+  /* box-shadow: 0 2px 6px rgba(0,0,0, 0.5); */
+}
+#projectGrid .project-tile:active{
+  box-shadow: none;
+}
+#projectGrid .project-tile a img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#projectGrid .project-tile:before, #projectGrid .project-tile:after{
+  position: absolute;
+  content: "";
+  background: var(--clr-5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: .5;
+  transition: opacity ease-in-out .3s, transform ease-in-out .3s;
+}
+#projectGrid .project-tile:after{
+  background: var(--clr-3);
+}
+#projectGrid .project-tile:hover:before{
+  transform: rotate(-.75deg) scale(1.025) skew(.05rad);
+}
+#projectGrid .project-tile:hover:after{
+  transform: rotate(1.75deg) scale(1.025) skew(.05rad);
+}
+@media (prefers-reduced-motion) {
+  #projectGrid .project-tile:before, #projectGrid .project-tile:after{
+    transition: none;
+  }
+}
+
+@media (max-width:1024px){
+  #home{
+    grid-template-columns: 1fr;
+  }
+  .subtext{
+    display: inline-block;
+  }
+  #home, #experienceProjects{
+    height: auto;
+  }
+}
+
+.shape-overlays {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right:-20px;
+  width: 40px;
+  height: 100vh;
+}
+.shape-overlays path { fill: var(--clr-5); }
