@@ -321,6 +321,10 @@ p, li, a{
   --clr-3: #6930c3;
   --clr-4: #1e5f74;
   --clr-5: #64dfdf;
+  /* --clr-6: #ffcd00;
+  --clr-7: #ff7e00; */
+  --clr-6: #ADEFD1;
+  --clr-7: #C7D3D4;
 }
 
 #home{
@@ -343,61 +347,17 @@ p, li, a{
 } 
 #intro #blob{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--clr-5);
+  width: 90%;
+  height: 90%;
   border-radius: 30% 40% 50% 80%;
   transform: skew(-10deg);
   z-index: -1;
   left: -2rem;
-  animation: blob 9s infinite;
-  transition: border-radius linear 1200ms, transform linear 1200ms;
-}
-@keyframes blob{
-  0%{
-    border-radius: 30% 40% 50% 80%;
-    transform: skew(10deg);
-  }
-  10%{
-    border-radius: 40% 50% 60% 90%;
-    transform: skew(5deg);
-  }
-  20%{
-    border-radius: 50% 60% 70% 80%;
-    transform: skew(0deg);
-  }
-  30%{
-    border-radius: 60% 70% 60% 70%;
-    transform: skew(-5deg);
-  }
-  40%{
-    border-radius: 70% 80% 50% 60%;
-    transform: skew(-10deg);
-  }
-  50%{
-    border-radius: 80% 90% 40% 50%;
-    transform: skew(-15deg);
-  }
-  60%{
-    border-radius: 70% 80% 30% 40%;
-    transform: skew(-10deg);
-  }
-  70%{
-    border-radius: 60% 70% 20% 50%;
-    transform: skew(-5deg);
-  }
-  80%{
-    border-radius: 50% 60% 30% 60%;
-    transform: skew(0deg);
-  }
-  90%{
-    border-radius: 40% 50% 40% 70%;
-    transform: skew(5deg);
-  }
-  100%{
-    border-radius: 30% 40% 50% 80%;
-    transform: skew(10deg);
-  }
+  animation: blob 9s ease infinite;
+  transition: border-radius ease 1200ms, transform ease 1200ms;
+  background: var(--clr-5);
+  background: linear-gradient(208deg, var(--clr-6), var(--clr-7));
+  background-size: 400% 400%;
 }
 #hello{
   font-size: 8rem;
@@ -427,28 +387,6 @@ body a{
 h1{
   display: inline;
 }
-/* @media (prefers-color-scheme: dark) {
-  body{
-    background: var(--clr-1, black);
-  }
-  #experience{
-    color: white;
-  }
-} */
-
-@media print {
-  #home{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-  #experience{
-    height: auto;
-  }
-  #experienceProjects{
-    height: auto;
-  }
-}
 #projects{
   padding-top: 5rem;
   border-top: 1px solid var(--clr-1);
@@ -475,9 +413,6 @@ h1{
 #projectGrid .project-tile a{
   display: block;
   line-height: inherit;
-}
-#projectGrid .project-tile:hover{
-  /* box-shadow: 0 2px 6px rgba(0,0,0, 0.5); */
 }
 #projectGrid .project-tile:active{
   box-shadow: none;
@@ -508,8 +443,61 @@ h1{
 #projectGrid .project-tile:hover:after{
   transform: rotate(1.75deg) scale(1.025) skew(.05rad);
 }
+@keyframes blob{
+  0%{
+    border-radius: 30% 40% 50% 80%;
+    transform: skew(10deg);
+    background-position:18% 0%
+  }
+  10%{
+    border-radius: 40% 50% 60% 90%;
+    transform: skew(5deg);
+  }
+  20%{
+    border-radius: 50% 60% 70% 80%;
+    transform: skew(0deg);
+  }
+  30%{
+    border-radius: 60% 70% 60% 70%;
+    transform: skew(-5deg);
+  }
+  40%{
+    border-radius: 70% 80% 50% 60%;
+    transform: skew(-10deg);
+  }
+  50%{
+    border-radius: 80% 90% 40% 50%;
+    transform: skew(-15deg);
+    background-position:83% 100%
+  }
+  60%{
+    border-radius: 70% 80% 30% 40%;
+    transform: skew(-10deg);
+  }
+  70%{
+    border-radius: 60% 70% 20% 50%;
+    transform: skew(-5deg);
+  }
+  80%{
+    border-radius: 50% 60% 30% 60%;
+    transform: skew(0deg);
+  }
+  90%{
+    border-radius: 40% 50% 40% 70%;
+    transform: skew(5deg);
+  }
+  100%{
+    border-radius: 30% 40% 50% 80%;
+    transform: skew(10deg);
+    background-position:18% 0%
+  }
+}
 @media (prefers-reduced-motion) {
   #projectGrid .project-tile:before, #projectGrid .project-tile:after{
+    transition: none;
+  }
+  #intro #blob{
+    animation: none;
     transition: none;
   }
 }
@@ -526,12 +514,24 @@ h1{
   }
 }
 
-.shape-overlays {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right:-20px;
-  width: 40px;
-  height: 100vh;
+/* @media (prefers-color-scheme: dark) {
+  body{
+    background: var(--clr-1, black);
+  }
+  #experience{
+    color: white;
+  }
+} */
+@media print {
+  #home{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  #experience{
+    height: auto;
+  }
+  #experienceProjects{
+    height: auto;
+  }
 }
-.shape-overlays path { fill: var(--clr-5); }
