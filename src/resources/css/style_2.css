@@ -22,7 +22,7 @@ body{
 	margin:0;
 	font-family: Tahoma, sans-serif;
 	font-size:14px;
-	background-color: #fefefd;
+	background-color: var(--project-bkg-clr, #fff);
 }
 body, body *{
 	box-sizing:border-box;
@@ -442,7 +442,7 @@ a:hover {
 }
 .work-content h2{
 	font-family:Tahoma, sans-serif;
-	font-size:24px;
+	font-size:16px;
 	color:#eee;
 	padding:5px 15px;
 	margin-top:-42px;
@@ -489,7 +489,7 @@ a:hover {
 .project{
 	width: 100%;
 	padding: 3em 0;
-	color: #333;
+	color: var(--project-text-clr, #333);
 	line-height: 1.6;
 	overflow: auto;
 }
@@ -512,8 +512,7 @@ a:hover {
 .project h4:before{left: 100%; border-right: 20px solid transparent; border-top: 34px solid #ec6b70; border-left: 0px solid transparent;top: 0;}
 .project p{
 	padding: 1em 0;
-	font-size: 24px;
-	font-family: garamond, georgia, serif;
+	font-size: 16px;
 }
 .project .left{
 	width:100%;
@@ -920,4 +919,11 @@ p.coming-soon{color:#fff; font-size: 24px; font-style: italic; background: #09c;
 .heading p:nth-child(4){
 	color:#A6D53B;
 	/*D80144,F7C623,0194b6,a6d53b*/
+}
+
+@media (prefers-color-scheme: dark) {
+  body{ 
+		--project-bkg-clr: #1d2d50;
+		--project-text-clr: #fff;
+	}
 }

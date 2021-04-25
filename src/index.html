@@ -24,7 +24,14 @@
         <li class="mr2 pt2 pb2"><a href="mailto:sravankacha@gmail.com" target="_blank" rel="noopener">Sravankacha[at]gmail.com</a></li>
       </ul>
       <p><span>&#9737;</span> Washington, DC</p>
-      <span id="blob"></span>
+      <!-- <span id="blob"></span> -->
+      <svg id="visualBlob" viewBox="0 0 700 700" width="900" height="900">
+        <g transform="translate(350 350)">
+          <path d="M258.1 -77.2C302.2 51.8 283.3 207.9 194.4 274.1C105.4 340.3 -53.7 316.6 -166.7 233.5C-279.8 150.4 -346.7 8 -311.3 -109.1C-275.8 -226.3 -137.9 -318.1 -15.5 -313.1C107 -308.1 214 -206.2 258.1 -77.2">
+            <animate dur="10s" repeatCount="indefinite" attributeName="d" values="M258.1 -77.2C302.2 51.8 283.3 207.9 194.4 274.1C105.4 340.3 -53.7 316.6 -166.7 233.5C-279.8 150.4 -346.7 8 -311.3 -109.1C-275.8 -226.3 -137.9 -318.1 -15.5 -313.1C107 -308.1 214 -206.2 258.1 -77.2;M321.9 -98.6C358.4 7.9 288.8 154.8 180.4 229.1C71.9 303.4 -75.4 305 -165.5 237.3C-255.5 169.6 -288.3 32.7 -251.1 -74.6C-214 -181.9 -107 -259.4 17.8 -265.2C142.7 -271 285.3 -205 321.9 -98.6;M292.1 -88.2C333.7 33.2 291.8 188.5 201.6 246.8C111.4 305.1 -26.9 266.3 -139.9 185.8C-252.9 105.3 -340.4 -16.9 -312.9 -118.9C-285.3 -221 -142.7 -303 -8.7 -300.2C125.2 -297.4 250.4 -209.7 292.1 -88.2;M316.9 -111.8C355.5 15.7 293.5 167.2 183 246C72.6 324.8 -86.3 331.1 -196.2 254.8C-306.1 178.6 -367 19.7 -326.2 -111C-285.3 -241.7 -142.7 -344.4 -1.7 -343.8C139.2 -343.2 278.3 -239.4 316.9 -111.8;M221.7 -73.2C265.1 61.5 262.8 210 179.9 277.2C97 344.4 -66.4 330.3 -177.2 248.7C-287.9 167.1 -346.1 17.9 -307.8 -109.8C-269.5 -237.6 -134.7 -343.8 -22.8 -336.4C89.2 -329 178.3 -207.9 221.7 -73.2"></animate>
+          </path>
+        </g>
+      </svg>
     </section>
     <section id="experienceProjects">
       <section id="experience">
@@ -241,3 +248,59 @@
   </main>
 </body>
 </html>
+<script type="text/javascript">
+  let blobChangeAnimation;
+  const blob = document.getElementById("visualBlob");
+  // const animateBlob = () => {
+  //   const paths = [
+  //     // "M293.3 -9.4C293.3 131.3 146.7 262.5 0.7 262.5C-145.3 262.5 -290.7 131.3 -290.7 -9.4C-290.7 -150 -145.3 -300 0.7 -300C146.7 -300 293.3 -150 293.3 -9.4",
+  //     // "M252 9.1C252 130.7 126 261.3 -12 261.3C-150 261.3 -300 130.7 -300 9.1C-300 -112.5 -150 -225 -12 -225C126 -225 252 -112.5 252 9.1",
+  //     "M258.1 -77.2C302.2 51.8 283.3 207.9 194.4 274.1C105.4 340.3 -53.7 316.6 -166.7 233.5C-279.8 150.4 -346.7 8 -311.3 -109.1C-275.8 -226.3 -137.9 -318.1 -15.5 -313.1C107 -308.1 214 -206.2 258.1 -77.2",
+  //     "M321.9 -98.6C358.4 7.9 288.8 154.8 180.4 229.1C71.9 303.4 -75.4 305 -165.5 237.3C-255.5 169.6 -288.3 32.7 -251.1 -74.6C-214 -181.9 -107 -259.4 17.8 -265.2C142.7 -271 285.3 -205 321.9 -98.6",
+  //     "M292.1 -88.2C333.7 33.2 291.8 188.5 201.6 246.8C111.4 305.1 -26.9 266.3 -139.9 185.8C-252.9 105.3 -340.4 -16.9 -312.9 -118.9C-285.3 -221 -142.7 -303 -8.7 -300.2C125.2 -297.4 250.4 -209.7 292.1 -88.2",
+  //     "M316.9 -111.8C355.5 15.7 293.5 167.2 183 246C72.6 324.8 -86.3 331.1 -196.2 254.8C-306.1 178.6 -367 19.7 -326.2 -111C-285.3 -241.7 -142.7 -344.4 -1.7 -343.8C139.2 -343.2 278.3 -239.4 316.9 -111.8",
+  //     "M221.7 -73.2C265.1 61.5 262.8 210 179.9 277.2C97 344.4 -66.4 330.3 -177.2 248.7C-287.9 167.1 -346.1 17.9 -307.8 -109.8C-269.5 -237.6 -134.7 -343.8 -22.8 -336.4C89.2 -329 178.3 -207.9 221.7 -73.2"
+  //   ];
+  //   const colors = [
+  //     "var(--clr-5)",
+  //     "var(--clr-6)",
+  //     "var(--clr-7)",
+  //   ]
+  //   blobChangeAnimation = setInterval(() => {
+  //     const pathIndex = Math.ceil(Math.random() * 4);
+  //     blob.setAttribute("d", paths[pathIndex]);
+  //     if(colors[pathIndex-1]){
+  //       blob.style.setProperty("--blob-clr", colors[pathIndex-1]);
+  //     }
+  //   }, 2000);
+  // }
+
+  // const stopAnimateBlob = () => {
+  //   clearInterval(blobChangeAnimation);
+  //   blobChangeAnimation = undefined;
+  // }
+
+  const animateBlob = () => {
+    blob.unpauseAnimations();
+  }
+  const stopAnimateBlob = () => {
+    blob.pauseAnimations();
+  }
+  
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // Check if the media query matches or is not available.
+  if (!mediaQuery || mediaQuery.matches) {
+    stopAnimateBlob();
+  } else {
+    animateBlob();
+  }
+
+  // Ads an event listener to check for changes in the media query's value.
+  mediaQuery.addEventListener("change", () => {
+    if (mediaQuery.matches) {
+      stopAnimateBlob();
+    } else {
+      animateBlob();
+    }
+  });
+</script>

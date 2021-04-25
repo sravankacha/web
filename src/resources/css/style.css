@@ -1,21 +1,3 @@
-body {
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-family: 'Fira Code', monospace;
-  font-size: 16px;
-  color: var(--clr-1, black);
-}
-
-body,
-body * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-p, li, a{
-  line-height: 1.5;
-}
-
 .mva {
   margin: auto 0
 }
@@ -327,6 +309,36 @@ p, li, a{
   --clr-7: #C7D3D4;
 }
 
+html{
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 3rem;
+  scroll-padding-bottom: 3rem;
+}
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  color: var(--clr-1, black);
+  background: var(--clr-2);
+}
+
+body,
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body a{
+  color: var(--clr-3);
+}
+
+p, li, a{
+  line-height: 1.5;
+}
+h1{
+  display: inline;
+}
 #home{
   width: 100vw;
   height: 100vh;
@@ -344,20 +356,16 @@ p, li, a{
   height: 100vh;
   min-height: 32rem;
   position: relative;
-} 
-#intro #blob{
+}
+svg#visualBlob{
   position: absolute;
-  width: 90%;
-  height: 90%;
-  border-radius: 30% 40% 50% 80%;
-  transform: skew(-10deg);
-  z-index: -1;
-  left: -2rem;
-  animation: blob 9s ease infinite;
-  transition: border-radius ease 1200ms, transform ease 1200ms;
-  background: var(--clr-5);
-  background: linear-gradient(208deg, var(--clr-6), var(--clr-7));
-  background-size: 400% 400%;
+  left: -4rem;
+  isolation: isolate;
+}
+svg#visualBlob path{
+  /* fill: #BB004B; */
+  fill: var(--blob-clr, var(--clr-6));
+  /* transition: all 1s ease 0s; */
 }
 #hello{
   font-size: 8rem;
@@ -376,20 +384,35 @@ p, li, a{
   align-items: center;
   list-style: none;
 }
-body a{
-  color: var(--clr-3);
-}
 #experienceProjects{
   padding: 5rem;
   height: 100vh;
   overflow: auto;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 3rem;
+  scroll-snap-align: start;
 }
-h1{
-  display: inline;
+#experience article section{
+  transition: all .3s ease-in-out;
+  padding: 3rem;
+  margin-inline-start: -3rem;
+}
+#experience article section:hover{
+  box-shadow: 2rem 2rem 4rem rgb(0 0 0 / 10%), 2rem 2rem 4rem rgb(255 255 255 / 10%);
+  border-radius: 3rem;
+  background: rgba(0,0,0,0.03);
+}
+#experience article section ol{
+  margin-inline-start: 2rem;
+}
+#experience article, #experience article section, #projects{
+  scroll-snap-align: start;
 }
 #projects{
   padding-top: 5rem;
   border-top: 1px solid var(--clr-1);
+  padding-bottom: 5rem;
 }
 #projectGrid{
   list-style: none;
@@ -399,20 +422,23 @@ h1{
   grid-auto-flow: row;
 }
 #projectGrid .project-tile{
-  background: conic-gradient(at top right, var(--clr-4),var(--clr-5));
+  /* background: conic-gradient(at top right, var(--clr-4),var(--clr-5)); */
   aspect-ratio: 1/1;
   padding: 0;
   margin: 0;
   line-height: 0;
   display: block;
   box-shadow: none;
-  transition:all .2s linear;
+  transition: all .2s linear;
   position: relative;
+  --project-tile-radius: 20% 40% 40% 20%;
 }
 
 #projectGrid .project-tile a{
   display: block;
   line-height: inherit;
+  border-radius: var(--project-tile-radius);
+  overflow: hidden;
 }
 #projectGrid .project-tile:active{
   box-shadow: none;
@@ -431,73 +457,27 @@ h1{
   right: 0;
   bottom: 0;
   z-index: -1;
-  opacity: .5;
+  opacity: .75;
+  border-radius: var(--project-tile-radius);
   transition: opacity ease-in-out .3s, transform ease-in-out .3s;
 }
 #projectGrid .project-tile:after{
   background: var(--clr-3);
 }
 #projectGrid .project-tile:hover:before{
-  transform: rotate(-.75deg) scale(1.025) skew(.05rad);
+  transform: rotate(-2deg) scale(1.025) skew(.05rad);
 }
 #projectGrid .project-tile:hover:after{
-  transform: rotate(1.75deg) scale(1.025) skew(.05rad);
+  transform: rotate(2deg) scale(1.025) skew(.05rad);
 }
-@keyframes blob{
-  0%{
-    border-radius: 30% 40% 50% 80%;
-    transform: skew(10deg);
-    background-position:18% 0%
-  }
-  10%{
-    border-radius: 40% 50% 60% 90%;
-    transform: skew(5deg);
-  }
-  20%{
-    border-radius: 50% 60% 70% 80%;
-    transform: skew(0deg);
-  }
-  30%{
-    border-radius: 60% 70% 60% 70%;
-    transform: skew(-5deg);
-  }
-  40%{
-    border-radius: 70% 80% 50% 60%;
-    transform: skew(-10deg);
-  }
-  50%{
-    border-radius: 80% 90% 40% 50%;
-    transform: skew(-15deg);
-    background-position:83% 100%
-  }
-  60%{
-    border-radius: 70% 80% 30% 40%;
-    transform: skew(-10deg);
-  }
-  70%{
-    border-radius: 60% 70% 20% 50%;
-    transform: skew(-5deg);
-  }
-  80%{
-    border-radius: 50% 60% 30% 60%;
-    transform: skew(0deg);
-  }
-  90%{
-    border-radius: 40% 50% 40% 70%;
-    transform: skew(5deg);
-  }
-  100%{
-    border-radius: 30% 40% 50% 80%;
-    transform: skew(10deg);
-    background-position:18% 0%
-  }
+#projectGrid .project-tile:nth-child(2n){
+  --project-tile-radius: 35% 25% 40% 20%;
+}
+#projectGrid .project-tile:nth-child(3n){
+  --project-tile-radius: 30% 25% 25% 25%;
 }
 @media (prefers-reduced-motion) {
   #projectGrid .project-tile:before, #projectGrid .project-tile:after{
-    transition: none;
-  }
-  #intro #blob{
-    animation: none;
     transition: none;
   }
 }
@@ -514,14 +494,24 @@ h1{
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
-  body{
-    background: var(--clr-1, black);
+@media (prefers-color-scheme: dark) {
+  :root{
+    --clr-1: white;
+    --clr-2: #1d2d50;
+    --clr-3: #C7D3D4;
+    --clr-4: #C7D3D4;
   }
-  #experience{
-    color: white;
+  #intro,#intro > *{
+    mix-blend-mode: difference;
   }
-} */
+  #experience article section:hover{
+    background-color: rgba(0,0,0,0.1);
+  }
+  #projectGrid .project-tile{
+    --clr-5: Crimson;
+    --clr-3: Yellow;
+  }
+}
 @media print {
   #home{
     display: flex;
